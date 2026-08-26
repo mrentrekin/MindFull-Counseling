@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /after-the-affair/c/

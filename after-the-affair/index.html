@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>After the Affair — A Couples Recovery Course</title>
+<meta name="description" content="A five-module, self-paced recovery course for couples in the weeks and months after infidelity. From MindFull Counseling &amp; Consulting.">
+<meta property="og:title" content="After the Affair — A Couples Recovery Course">
+<meta property="og:description" content="Five modules for stabilizing the crisis, understanding what happened, learning to talk again, rebuilding trust, and deciding what comes next.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Karla:ital,wght@0,300;0,400;0,500;0,600&family=DM+Mono:wght@300;400&display=swap">
+<style>
+:root{
+  --ground:#F3F5F2; --surface:#FBFCFA; --surface-2:#EDF0EC; --field:#FFFFFF;
+  --ink:#1A211F; --ink-2:#3C4744; --muted:#66746F; --faint:#93A09B;
+  --rule:#D9DFDA; --rule-soft:#E6EAE5;
+  --accent:#2E5D52; --accent-soft:#DCE8E3; --accent-ink:#234A41;
+  --brass:#8A6D2F; --brass-soft:#F0E7D2;
+  --plum:#7A4650; --plum-soft:#F2E3E4;
+  --shadow:0 1px 2px rgba(26,33,31,.05), 0 8px 24px -16px rgba(26,33,31,.28);
+  --radius:3px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1413; --surface:#161C1A; --surface-2:#1D2422; --field:#111716;
+    --ink:#E7EBE7; --ink-2:#C3CCC8; --muted:#94A19C; --faint:#6C7975;
+    --rule:#2A332F; --rule-soft:#212926;
+    --accent:#83B7A6; --accent-soft:#1C2A27; --accent-ink:#A6CFC1;
+    --brass:#C6A868; --brass-soft:#241E12;
+    --plum:#C99098; --plum-soft:#251A1C;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1413; --surface:#161C1A; --surface-2:#1D2422; --field:#111716;
+  --ink:#E7EBE7; --ink-2:#C3CCC8; --muted:#94A19C; --faint:#6C7975;
+  --rule:#2A332F; --rule-soft:#212926;
+  --accent:#83B7A6; --accent-soft:#1C2A27; --accent-ink:#A6CFC1;
+  --brass:#C6A868; --brass-soft:#241E12;
+  --plum:#C99098; --plum-soft:#251A1C;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:'Karla','Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:400;text-wrap:balance;margin:0;}
+p{margin:0;}
+a{color:var(--accent-ink);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.wrap{max-width:40rem;margin:0 auto;padding:0 1.6rem;}
+.eyebrow{font-family:'DM Mono',ui-monospace,monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);}
+
+header.mast{padding:5.5rem 0 3rem;}
+header.mast h1{font-size:clamp(2.9rem,7.5vw,4.4rem);line-height:.95;letter-spacing:-.015em;margin:1.5rem 0 0;}
+header.mast h1 em{font-style:italic;color:var(--accent);}
+.deck{margin-top:1.7rem;font-size:1.12rem;color:var(--ink-2);}
+.byline{margin-top:2.2rem;font-family:'DM Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);}
+
+section{padding:2.8rem 0;border-top:1px solid var(--rule-soft);}
+h2{font-size:1.85rem;line-height:1.12;margin-bottom:1rem;}
+.prose p + p{margin-top:1rem;}
+.lede{font-size:1.06rem;color:var(--ink-2);}
+
+.modules{margin-top:1.6rem;border-top:1px solid var(--rule);}
+.modules div{display:grid;grid-template-columns:2.4rem 1fr;gap:.4rem 1rem;padding:.95rem 0;border-bottom:1px solid var(--rule-soft);align-items:baseline;}
+.modules .n{font-family:'DM Mono',ui-monospace,monospace;font-size:.68rem;color:var(--accent);letter-spacing:.1em;}
+.modules h3{font-size:1.3rem;line-height:1.2;}
+.modules p{grid-column:2;font-size:.94rem;color:var(--muted);}
+
+.who{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--radius);margin-top:1.5rem;overflow:hidden;}
+.who > div{background:var(--surface);padding:1.2rem 1.25rem 1.35rem;}
+.who h3{font-family:'DM Mono',ui-monospace,monospace;font-size:.61rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;}
+.who p{font-size:.94rem;color:var(--ink-2);}
+.who ul{margin:.2rem 0 0;padding-left:1.05rem;font-size:.94rem;color:var(--ink-2);}
+.who li{margin-bottom:.35rem;}
+.who li::marker{color:var(--faint);}
+
+.caution{border-left:2px solid var(--plum);background:var(--plum-soft);padding:1.1rem 1.2rem;border-radius:0 var(--radius) var(--radius) 0;margin-top:1.6rem;}
+.caution h3{font-family:'DM Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--plum);margin-bottom:.4rem;}
+.caution p{font-size:.94rem;color:var(--ink-2);}
+
+/* ---- the gate ---- */
+.gate{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:1.8rem 1.7rem 1.9rem;box-shadow:var(--shadow);margin-top:1.6rem;}
+.gate h2{font-size:1.6rem;margin-bottom:.5rem;}
+.gate .sub{font-size:.95rem;color:var(--muted);}
+.gate form{margin-top:1.4rem;display:flex;flex-direction:column;gap:.95rem;}
+label.f{display:block;font-size:.83rem;color:var(--muted);margin-bottom:.3rem;font-family:'DM Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;}
+input[type=email],input[type=text]{width:100%;background:var(--field);color:var(--ink);
+  border:1px solid var(--rule);border-radius:var(--radius);font-family:'Karla',sans-serif;font-size:1rem;padding:.7rem .8rem;}
+input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft);}
+.consent{display:flex;gap:.65rem;align-items:flex-start;font-size:.88rem;color:var(--muted);cursor:pointer;}
+.consent input{margin:.3rem 0 0;accent-color:var(--accent);width:1rem;height:1rem;flex:none;}
+button.go{font-family:'DM Mono',ui-monospace,monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--accent);border:1px solid var(--accent);color:var(--ground);padding:.85rem 1rem;border-radius:var(--radius);cursor:pointer;}
+button.go:hover{filter:brightness(1.08);}
+button.go[disabled]{opacity:.6;cursor:default;}
+.msg{font-size:.86rem;color:var(--plum);min-height:1.2rem;}
+.fine{margin-top:1.1rem;font-size:.8rem;color:var(--faint);line-height:1.5;}
+.returning{margin-top:1rem;font-size:.88rem;color:var(--muted);}
+
+footer{border-top:1px solid var(--rule);margin-top:2rem;padding:2.6rem 0 4.5rem;}
+footer p{font-size:.8rem;color:var(--muted);}
+footer p + p{margin-top:.7rem;}
+
+@media (max-width:640px){
+  .who{grid-template-columns:1fr;}
+  header.mast{padding:3.2rem 0 2.2rem;}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important;}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="eyebrow">MindFull Counseling &amp; Consulting</div>
+    <h1>After the<br><em>Affair</em></h1>
+    <p class="deck">A five-module, self-paced recovery course for the weeks and months after discovery — stabilizing the crisis, understanding how it happened, learning to talk again, rebuilding trust on evidence, and deciding what comes next on purpose rather than in panic.</p>
+    <div class="byline">24 lessons · 27 tools · Free · Both partners</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="prose">
+      <p class="lede">Discovery collapses time. Everything feels like it has to be decided tonight — whether to stay, what to tell people, whether anything before this was real. Almost none of it does.</p>
+      <p>This course is built to slow that down. It doesn't assume you'll stay together and it doesn't assume you'll separate. It assumes that whichever you choose, you'd rather choose it clearly than be swept into it.</p>
+    </div>
+    <div class="modules">
+      <div><span class="n">01</span><h3>Stop the Bleeding</h3><p>Contain the crisis, set boundaries that hold, and learn what flooding is doing to both of you.</p></div>
+      <div><span class="n">02</span><h3>Understand What Happened</h3><p>Build an accountable explanation — responsibility first, context second, blame never transferred.</p></div>
+      <div><span class="n">03</span><h3>Learning to Talk Again</h3><p>A structure for hard conversations: the container, the questions worth asking, and repair after escalation.</p></div>
+      <div><span class="n">04</span><h3>Rebuilding Trust</h3><p>Replace reassurance with evidence, and give transparency an exit rather than a permanent role.</p></div>
+      <div><span class="n">05</span><h3>Choosing Your Future</h3><p>Assess readiness, separate forgiveness from reconciliation, and put the next ninety days in writing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="who">
+      <div>
+        <h3>This will help if</h3>
+        <ul>
+          <li>Discovery was recent and the days feel unmanageable</li>
+          <li>You keep having the same conversation and it keeps ending badly</li>
+          <li>You want structure between therapy sessions</li>
+          <li>You don't know yet what you want, and want to decide well</li>
+        </ul>
+      </div>
+      <div>
+        <h3>This is not</h3>
+        <ul>
+          <li>Therapy, or a substitute for it</li>
+          <li>A diagnosis or an assessment of your relationship</li>
+          <li>A push toward staying, or toward leaving</li>
+          <li>Appropriate where there is violence or coercive control</li>
+        </ul>
+      </div>
+    </div>
+    <div class="caution">
+      <h3>If you're in danger right now</h3>
+      <p>Where there is violence, coercion or controlling behavior, stalking, threats, or thoughts of suicide, this course is not the right first step. In the U.S.: 988 Suicide &amp; Crisis Lifeline (call or text 988); National Domestic Violence Hotline 1-800-799-7233, or text START to 88788. These resources are here whether or not you enter your email.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="gate">
+      <h2>Start the course</h2>
+      <p class="sub">Enter your email and the course opens in this window. Nothing you write inside it is ever sent anywhere — your answers stay in your own browser.</p>
+      <form id="gateform" novalidate>
+        <div>
+          <label class="f" for="fname">First name <span style="text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <input type="text" id="fname" name="fields[first_name]" autocomplete="given-name">
+        </div>
+        <div>
+          <label class="f" for="email">Email address</label>
+          <input type="email" id="email" name="email_address" required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <label class="consent"><input type="checkbox" id="consent"> I understand this is educational material, not therapy, and I'm okay receiving occasional related resources. You can unsubscribe at any time.</label>
+        <div class="msg" id="msg" role="status" aria-live="polite"></div>
+        <button class="go" type="submit" id="go">Open the course</button>
+      </form>
+      <p class="returning" id="returning" hidden>You've already started — <a href="" id="resume">pick up where you left off</a>.</p>
+      <p class="fine">Your address goes to my mailing list and nowhere else. It is not a clinical record, it does not create a counseling relationship, and it will never be sold or shared. The course itself stores your written answers only in this browser, on this device.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Michael Entrekin, LPC, LAC</strong> — MindFull Counseling &amp; Consulting. Licensed Professional Counselor (PA), Licensed Associate Counselor (NJ), licensed school counselor, certified teacher and supervisor.</p>
+    <p>This material is psychoeducational. It is not intended to diagnose or treat a mental health disorder, to determine whether a couple should remain together, or to replace individualized assessment and care. Couples experiencing severe distress, trauma symptoms, intimate partner violence, coercive control, active addiction, or significant mental health concerns should seek appropriate professional support.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ─────────────────────────────────────────────────────────────
+     SETTINGS — the only three lines you need to edit.
+     KIT_FORM_ID : the number in your Kit form's embed code
+                   (Kit → Grow → Landing Pages & Forms → your form
+                   → Embed → HTML; the action URL ends in
+                   /forms/1234567/subscriptions — use 1234567)
+     KIT_UID     : the data-uid value in that same embed code
+     COURSE_URL  : where the course lives, relative to this page
+     ───────────────────────────────────────────────────────────── */
+  var KIT_FORM_ID = "REPLACE_WITH_FORM_ID";
+  var KIT_UID     = "REPLACE_WITH_UID";
+  var COURSE_URL  = "c/edf9zcovy2d23m/";
+
+  var STORE_KEY = "ata-gate-v1";
+  var form = document.getElementById("gateform");
+  var email = document.getElementById("email");
+  var fname = document.getElementById("fname");
+  var consent = document.getElementById("consent");
+  var msg = document.getElementById("msg");
+  var go = document.getElementById("go");
+
+  function remembered(){
+    try{ return window.localStorage.getItem(STORE_KEY); }catch(e){ return null; }
+  }
+  function remember(){
+    try{ window.localStorage.setItem(STORE_KEY, "1"); }catch(e){}
+  }
+
+  // returning visitor — offer the course without asking again
+  if(remembered()){
+    var r = document.getElementById("returning");
+    var link = document.getElementById("resume");
+    if(link) link.setAttribute("href", COURSE_URL);
+    if(r) r.hidden = false;
+  }
+
+  function valid(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+
+  function enter(){
+    remember();
+    window.location.href = COURSE_URL;
+  }
+
+  // Post to Kit without CORS trouble: a real form post into a hidden iframe.
+  // The subscriber lands in Kit; we never wait on their response to let
+  // someone in — a person in the middle of this should not be stuck behind
+  // a form outage.
+  function sendToKit(cb){
+    if(!KIT_FORM_ID || KIT_FORM_ID.indexOf("REPLACE") === 0){ cb(); return; }
+    var name = "kit-sink-" + Date.now();
+    var iframe = document.createElement("iframe");
+    iframe.name = name; iframe.style.display = "none";
+    document.body.appendChild(iframe);
+
+    var f = document.createElement("form");
+    f.method = "POST";
+    f.action = "https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions";
+    f.target = name;
+    f.style.display = "none";
+    f.setAttribute("data-sv-form", KIT_FORM_ID);
+    f.setAttribute("data-uid", KIT_UID);
+
+    function field(n, v){
+      var i = document.createElement("input");
+      i.type = "hidden"; i.name = n; i.value = v; f.appendChild(i);
+    }
+    field("email_address", email.value.trim());
+    if(fname.value.trim()) field("fields[first_name]", fname.value.trim());
+
+    document.body.appendChild(f);
+    var done = false;
+    function finish(){ if(done) return; done = true; cb(); }
+    iframe.addEventListener("load", finish);
+    setTimeout(finish, 2500); // never leave anyone waiting
+    f.submit();
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    msg.textContent = "";
+    var v = email.value.trim();
+    if(!valid(v)){
+      msg.textContent = "That email address doesn't look complete — check it and try again.";
+      email.focus();
+      return;
+    }
+    if(!consent.checked){
+      msg.textContent = "Please check the box so I know you've read what this is.";
+      consent.focus();
+      return;
+    }
+    go.disabled = true;
+    go.textContent = "Opening…";
+    sendToKit(enter);
+  });
+})();
+</script>
+</body>
+</html>

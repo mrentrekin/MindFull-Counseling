@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="After the Affair — a five-module couples recovery course for the weeks and months after infidelity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>After the Affair — A Couples Recovery Course</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Karla:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+
+/* ---------- tokens: light (default, un-stamped) ---------- */
+:root{
+  --ground:#F3F5F2;
+  --surface:#FBFCFA;
+  --surface-2:#EDF0EC;
+  --field:#FFFFFF;
+  --ink:#1A211F;
+  --ink-2:#3C4744;
+  --muted:#66746F;
+  --faint:#93A09B;
+  --rule:#D9DFDA;
+  --rule-soft:#E6EAE5;
+  --accent:#2E5D52;
+  --accent-soft:#DCE8E3;
+  --accent-ink:#234A41;
+  --brass:#8A6D2F;
+  --brass-soft:#F0E7D2;
+  --plum:#7A4650;
+  --plum-soft:#F2E3E4;
+  --shadow:0 1px 2px rgba(26,33,31,.05), 0 8px 24px -16px rgba(26,33,31,.28);
+  --radius:3px;
+  --maxw:38rem;
+  color-scheme:light;
+}
+/* ---------- tokens: dark ---------- */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1413;
+    --surface:#161C1A;
+    --surface-2:#1D2422;
+    --field:#111716;
+    --ink:#E7EBE7;
+    --ink-2:#C3CCC8;
+    --muted:#94A19C;
+    --faint:#6C7975;
+    --rule:#2A332F;
+    --rule-soft:#212926;
+    --accent:#83B7A6;
+    --accent-soft:#1C2A27;
+    --accent-ink:#A6CFC1;
+    --brass:#C6A868;
+    --brass-soft:#241E12;
+    --plum:#C99098;
+    --plum-soft:#251A1C;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1413;
+  --surface:#161C1A;
+  --surface-2:#1D2422;
+  --field:#111716;
+  --ink:#E7EBE7;
+  --ink-2:#C3CCC8;
+  --muted:#94A19C;
+  --faint:#6C7975;
+  --rule:#2A332F;
+  --rule-soft:#212926;
+  --accent:#83B7A6;
+  --accent-soft:#1C2A27;
+  --accent-ink:#A6CFC1;
+  --brass:#C6A868;
+  --brass-soft:#241E12;
+  --plum:#C99098;
+  --plum-soft:#251A1C;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:'Karla','Helvetica Neue',Arial,sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:400;text-wrap:balance;margin:0;}
+p{margin:0;}
+a{color:var(--accent-ink);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:15.5rem minmax(0,1fr);gap:0;align-items:start;}
+.rail{
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  padding:2.2rem 1.4rem 2rem 2rem;
+  border-right:1px solid var(--rule-soft);
+  background:var(--ground);
+  display:flex;flex-direction:column;gap:1.6rem;
+}
+.rail-mark{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;line-height:1.15;letter-spacing:.01em;}
+.rail-mark span{display:block;font-family:'DM Mono',ui-monospace,monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-top:.5rem;}
+.rail nav{display:flex;flex-direction:column;gap:.1rem;}
+.rail nav a{
+  display:flex;gap:.7rem;align-items:baseline;
+  text-decoration:none;color:var(--muted);
+  font-size:.83rem;line-height:1.35;padding:.42rem .5rem .42rem 0;
+  border-radius:var(--radius);
+}
+.rail nav a:hover{color:var(--ink);}
+.rail nav a.current{color:var(--ink);}
+.rail nav a .n{font-family:'DM Mono',ui-monospace,monospace;font-size:.66rem;color:var(--faint);min-width:1.2rem;}
+.rail nav a.current .n{color:var(--accent);}
+.rail-foot{margin-top:auto;display:flex;flex-direction:column;gap:.55rem;}
+.rail-progress{font-family:'DM Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);}
+.bar{height:2px;background:var(--rule);position:relative;overflow:hidden;}
+.bar i{position:absolute;inset:0 auto 0 0;width:0;background:var(--accent);transition:width .5s ease;}
+.rail-btn{
+  font-family:'DM Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule);color:var(--muted);
+  padding:.5rem .6rem;border-radius:var(--radius);cursor:pointer;text-align:left;
+}
+.rail-btn:hover{border-color:var(--accent);color:var(--ink);}
+
+.main{padding:0 0 8rem;min-width:0;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.6rem;}
+.wrap-wide{max-width:52rem;margin:0 auto;padding:0 1.6rem;}
+
+/* ---------- masthead ---------- */
+.mast{padding:6.5rem 0 3.4rem;border-bottom:1px solid var(--rule-soft);}
+.eyebrow{font-family:'DM Mono',ui-monospace,monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);}
+.mast h1{font-size:clamp(3rem,8vw,4.9rem);line-height:.94;letter-spacing:-.015em;margin:1.6rem 0 0;}
+.mast h1 em{font-style:italic;color:var(--accent);}
+.mast .deck{margin-top:1.8rem;font-size:1.12rem;color:var(--ink-2);max-width:32rem;}
+.mast .meta{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-family:'DM Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);}
+
+/* ---------- generic sections ---------- */
+section{scroll-margin-top:1rem;}
+.block{padding:3.6rem 0;}
+.block + .block{border-top:1px solid var(--rule-soft);}
+h2.head{font-size:2.05rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:.9rem;}
+h3.sub{font-size:1.45rem;line-height:1.2;margin:2.4rem 0 .7rem;}
+h4.min{font-family:'Karla',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem;}
+.lede{font-size:1.1rem;color:var(--ink-2);}
+p + p{margin-top:1rem;}
+.prose p{margin-top:1rem;}
+.prose p:first-child{margin-top:0;}
+ul.plain{margin:1rem 0 0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem;}
+ul.plain li{padding-left:.2rem;}
+ul.plain li::marker{color:var(--faint);}
+
+/* ---------- module plate ---------- */
+.plate{padding:5rem 0 2.6rem;}
+.plate .num{
+  font-family:'DM Mono',ui-monospace,monospace;font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);
+}
+.plate h2{font-size:clamp(2.4rem,5.5vw,3.4rem);line-height:1;letter-spacing:-.015em;margin:.9rem 0 0;}
+.plate .obj{margin-top:1.3rem;color:var(--ink-2);font-style:italic;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;line-height:1.4;}
+.plate .contents{margin-top:2rem;border-top:1px solid var(--rule);padding-top:1rem;display:flex;flex-direction:column;}
+.plate .contents div{display:flex;gap:.9rem;padding:.4rem 0;font-size:.87rem;color:var(--muted);border-bottom:1px solid var(--rule-soft);}
+.plate .contents div span{font-family:'DM Mono',ui-monospace,monospace;font-size:.7rem;color:var(--faint);padding-top:.15rem;}
+
+/* ---------- lesson ---------- */
+.lesson{padding:2.8rem 0 1rem;}
+.lesson-head{display:flex;gap:1rem;align-items:baseline;}
+.lesson-head .id{font-family:'DM Mono',ui-monospace,monospace;font-size:.72rem;color:var(--accent);letter-spacing:.08em;padding-top:.35rem;}
+.lesson-head h3{font-size:1.75rem;line-height:1.12;letter-spacing:-.005em;}
+.beat{margin-top:1.7rem;}
+.beat > .tag{
+  font-family:'DM Mono',ui-monospace,monospace;font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--faint);display:block;margin-bottom:.6rem;
+}
+.beat.reframe{border-left:2px solid var(--accent);padding-left:1.15rem;}
+.beat.reframe p{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;line-height:1.38;color:var(--ink);}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);
+  padding:1.5rem 1.5rem 1.6rem;margin-top:1.5rem;box-shadow:var(--shadow);
+}
+.card > h4.min{color:var(--accent-ink);}
+.tool{border-color:var(--rule);background:var(--surface);}
+.tool-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--rule-soft);padding-bottom:.8rem;margin-bottom:1.1rem;}
+.tool-head h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:500;margin:0;text-transform:none;letter-spacing:0;color:var(--ink);}
+.tool-head .kind{font-family:'DM Mono',ui-monospace,monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);white-space:nowrap;}
+
+.note{border-left:2px solid var(--brass);background:var(--brass-soft);padding:1rem 1.15rem;margin-top:1.4rem;border-radius:0 var(--radius) var(--radius) 0;}
+.note h4{font-family:'DM Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 .4rem;}
+.note p{font-size:.93rem;color:var(--ink-2);}
+.caution{border-left:2px solid var(--plum);background:var(--plum-soft);padding:1.1rem 1.2rem;margin-top:1.4rem;border-radius:0 var(--radius) var(--radius) 0;}
+.caution h4{font-family:'DM Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--plum);margin:0 0 .4rem;}
+.caution p{font-size:.95rem;color:var(--ink-2);}
+.caution p + p{margin-top:.6rem;}
+
+/* two-column partner split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--radius);margin-top:1.5rem;overflow:hidden;}
+.split > div{background:var(--surface);padding:1.2rem 1.25rem 1.35rem;}
+.split h4{font-family:'DM Mono',ui-monospace,monospace;font-size:.61rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .55rem;font-weight:400;}
+.split p{font-size:.94rem;color:var(--ink-2);}
+.split p + p{margin-top:.6rem;}
+
+/* ---------- form controls ---------- */
+label.f{display:block;font-size:.9rem;color:var(--ink-2);margin-bottom:.35rem;}
+label.f .hint{color:var(--faint);font-size:.82rem;}
+textarea,input[type=text],input[type=date]{
+  width:100%;background:var(--field);color:var(--ink);
+  border:1px solid var(--rule);border-radius:var(--radius);
+  font-family:'Karla',sans-serif;font-size:.95rem;line-height:1.55;padding:.6rem .7rem;
+}
+textarea{resize:vertical;min-height:4.5rem;}
+input[type=date]{font-family:'DM Mono',monospace;font-size:.85rem;}
+textarea:focus,input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft);}
+.fieldset{display:flex;flex-direction:column;gap:1rem;}
+.fieldrow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.check{display:flex;gap:.65rem;align-items:flex-start;font-size:.94rem;color:var(--ink-2);padding:.3rem 0;cursor:pointer;}
+.check input{margin:.35rem 0 0;accent-color:var(--accent);width:1rem;height:1rem;flex:none;}
+.checks{display:flex;flex-direction:column;gap:.1rem;margin-top:.4rem;}
+.checks.cols{display:grid;grid-template-columns:1fr 1fr;gap:.1rem 1.4rem;}
+
+.scale{display:flex;flex-direction:column;gap:.85rem;margin-top:.4rem;}
+.scale-row{display:grid;grid-template-columns:1fr 9.5rem 1.6rem;gap:.9rem;align-items:center;}
+.scale-row label{font-size:.92rem;color:var(--ink-2);}
+.scale-row input[type=range]{width:100%;accent-color:var(--accent);}
+.scale-row output{font-family:'DM Mono',monospace;font-size:.82rem;color:var(--accent-ink);text-align:right;font-variant-numeric:tabular-nums;}
+.scale-legend{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);border-top:1px solid var(--rule-soft);padding-top:.5rem;margin-top:.3rem;}
+
+.btn{
+  font-family:'DM Mono',ui-monospace,monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--surface-2);border:1px solid var(--rule);color:var(--ink-2);
+  padding:.55rem .9rem;border-radius:var(--radius);cursor:pointer;
+}
+.btn:hover{border-color:var(--accent);color:var(--ink);}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--ground);}
+:root[data-theme="dark"] .btn-primary{color:#0F1413;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-primary{color:#0F1413;}}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem;align-items:center;}
+
+.done{
+  display:flex;gap:.6rem;align-items:center;margin-top:2rem;padding-top:1.1rem;border-top:1px solid var(--rule-soft);
+  font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);cursor:pointer;
+}
+.done input{accent-color:var(--accent);width:.95rem;height:.95rem;}
+.done:hover{color:var(--muted);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.4rem;}
+.mini{border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.1rem;background:var(--surface);}
+.mini h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;margin:0 0 .35rem;}
+.mini p{font-size:.9rem;color:var(--muted);}
+
+table.grid{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.88rem;}
+table.grid th,table.grid td{border:1px solid var(--rule);padding:.5rem .6rem;text-align:left;vertical-align:top;}
+table.grid th{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400;background:var(--surface-2);}
+.table-scroll{overflow-x:auto;}
+table.grid input[type=text]{border:none;padding:.15rem;background:transparent;font-size:.85rem;}
+table.grid input[type=text]:focus{box-shadow:none;background:var(--field);}
+
+.timer{display:flex;align-items:center;gap:1.1rem;margin-top:1.2rem;padding:1rem 1.1rem;border:1px solid var(--rule);border-radius:var(--radius);background:var(--surface-2);}
+.timer .clock{font-family:'DM Mono',monospace;font-size:1.8rem;letter-spacing:.02em;color:var(--ink);font-variant-numeric:tabular-nums;min-width:5.4rem;}
+.timer .clock.ringing{color:var(--plum);}
+
+.q-four{counter-reset:q;margin-top:1.6rem;display:flex;flex-direction:column;gap:1.3rem;}
+.q-four > div{display:grid;grid-template-columns:2.2rem 1fr;gap:.4rem;}
+.q-four .qn{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1;color:var(--accent);}
+.q-four h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:500;margin:0 0 .25rem;text-transform:none;letter-spacing:0;color:var(--ink);}
+.q-four p{font-size:.95rem;color:var(--muted);}
+
+.pull{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.7rem;line-height:1.32;color:var(--ink);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1.6rem 0;margin:2.4rem 0;
+}
+.pull span{color:var(--accent);font-style:italic;}
+
+footer.foot{border-top:1px solid var(--rule);margin-top:4rem;padding:3rem 0 5rem;}
+footer.foot p{font-size:.82rem;color:var(--muted);}
+footer.foot p + p{margin-top:.8rem;}
+
+.saved-flag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr;}
+  .rail{position:static;height:auto;border-right:none;border-bottom:1px solid var(--rule);padding:1.4rem 1.6rem;}
+  .rail nav{flex-direction:row;flex-wrap:wrap;gap:.1rem 1rem;}
+  .rail nav a{padding:.25rem 0;}
+  .rail-foot{margin-top:1rem;}
+  .split,.grid-2,.fieldrow,.checks.cols{grid-template-columns:1fr;}
+  .scale-row{grid-template-columns:1fr 6rem 1.6rem;}
+  .mast{padding:3.4rem 0 2.6rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important;}
+}
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media print{
+  .rail,.btn,.btn-row,.timer,.done,.rail-btn{display:none !important;}
+  body{background:#fff;color:#111;font-size:11pt;}
+  .shell{display:block;}
+  .card,.split,.note,.caution{break-inside:avoid;}
+  .plate{break-before:page;}
+  textarea{min-height:3rem;}
+}
+</style>
+</head>
+<body>
+
+
+<div class="shell">
+<aside class="rail" id="rail">
+  <div class="rail-mark">After the Affair<span>Couples Recovery Course</span></div>
+  <nav id="railnav">
+    <a href="#start"><span class="n">00</span>Before you begin</a>
+    <a href="#m1"><span class="n">01</span>Stop the Bleeding</a>
+    <a href="#m2"><span class="n">02</span>Understand What Happened</a>
+    <a href="#m3"><span class="n">03</span>Learning to Talk Again</a>
+    <a href="#m4"><span class="n">04</span>Rebuilding Trust</a>
+    <a href="#m5"><span class="n">05</span>Choosing Your Future</a>
+    <a href="#frameworks"><span class="n">A</span>Where this comes from</a>
+    <a href="#clinicians"><span class="n">B</span>For clinicians</a>
+  </nav>
+  <div class="rail-foot">
+    <div class="rail-progress"><span id="progtext">0 of 24 lessons</span></div>
+    <div class="bar"><i id="progbar"></i></div>
+    <button class="rail-btn" id="copyall">Copy my responses</button>
+    <button class="rail-btn" onclick="window.print()">Print / save as PDF</button>
+  </div>
+</aside>
+
+<main class="main">
+
+<header class="mast">
+  <div class="wrap">
+    <div class="eyebrow">A structured pathway from crisis to clarity</div>
+    <h1>After the<br><em>Affair</em></h1>
+    <p class="deck">Five modules for the weeks after discovery — stabilizing the crisis, understanding how it happened, learning to talk again, rebuilding trust on evidence, and deciding what comes next on purpose rather than in panic.</p>
+    <div class="meta">
+      <span>5 modules · 24 lessons</span>
+      <span>Self-paced</span>
+      <span>Both partners</span>
+    </div>
+  </div>
+</header>
+
+<section id="start">
+  <div class="wrap block">
+    <div class="caution">
+      <h4>Read this first</h4>
+      <p>If there is violence, coercion or controlling behavior, stalking, threats, or thoughts of suicide, this course is not the right primary intervention and should not be used to keep a dangerous situation contained. Contact a qualified local professional or emergency services. In the U.S., the 988 Suicide &amp; Crisis Lifeline (call or text 988) and the National Domestic Violence Hotline (1-800-799-7233, or text START to 88788) are available around the clock.</p>
+      <p>This is educational material. It is not therapy, not a diagnosis, not legal advice, and not a verdict on whether your relationship should continue.</p>
+    </div>
+
+    <h2 class="head" style="margin-top:3rem;">What this course is trying to do</h2>
+    <div class="prose">
+      <p class="lede">Discovery collapses time. Everything feels like it has to be decided tonight — whether to stay, what to tell people, whether anything that happened before was real. Almost none of it does.</p>
+      <p>The work of the next several months is not to produce a verdict. It is to slow the crisis down enough that both of you can think, to stop the injury from repeating, to build an honest account of what happened, and to gather enough evidence — real evidence, not promises — to make a decision you can live with either way.</p>
+      <p>This course does not assume you will stay together. It does not assume you will separate. It assumes that whichever you choose, you would rather choose it clearly than be swept into it.</p>
+    </div>
+
+    <h3 class="sub">How the modules work</h3>
+    <div class="prose">
+      <p>Each module has an objective, four or five lessons, and a set of tools you fill in as you go. Every lesson follows the same three beats:</p>
+    </div>
+    <div class="grid-2">
+      <div class="mini"><h4>Understand</h4><p>What is actually happening — in the relationship, in the body, in the research. The teaching part.</p></div>
+      <div class="mini"><h4>Reframe</h4><p>The single shift in how you are seeing it. One sentence, meant to be argued with and then kept.</p></div>
+      <div class="mini"><h4>Act</h4><p>The practice. Something written, said, scheduled, or stopped this week.</p></div>
+    </div>
+    <div class="prose" style="margin-top:1.4rem;">
+      <p>Work at the pace of the harder week, not the easier one. Most couples spend two to four weeks per module, and many spend longer in Module 1 than they expect to. Progress is not how fast you move; it is whether honesty, follow-through, and the ability to recover from a hard conversation are increasing.</p>
+    </div>
+
+    <div class="note">
+      <h4>Two people, two copies</h4>
+      <p>Wherever there is a writing space, both partners answer it — separately, before comparing. Print or save your own copy so neither of you is composing an answer while reading the other's. What you write here stays in your browser on this device; nothing is transmitted anywhere.</p>
+    </div>
+
+    <h3 class="sub">Working agreements</h3>
+    <div class="prose"><p>Before the first module, agree on the conditions that make the rest of it possible. Check what you can both commit to for the next ninety days. Anything you cannot agree to yet is the first thing to bring to a therapist.</p></div>
+    <div class="card tool">
+      <div class="tool-head"><h4>Ninety-Day Working Agreement</h4><span class="kind">Tool 0.1</span></div>
+      <div class="checks" data-save="agreements">
+        <label class="check"><input type="checkbox"> No decisions about ending the relationship, moving out, or telling extended family are made during a flooded conversation.</label>
+        <label class="check"><input type="checkbox"> Contact with the affair partner has ended, and any unavoidable contact is disclosed the same day.</label>
+        <label class="check"><input type="checkbox"> No new discoveries. Anything still undisclosed comes out through this process, not through a phone found later.</label>
+        <label class="check"><input type="checkbox"> Either of us can call a pause. A pause has a return time attached to it.</label>
+        <label class="check"><input type="checkbox"> No involving the children in the details, and no using them to carry messages.</label>
+        <label class="check"><input type="checkbox"> No retaliation — no affair of my own, no public exposure, no destroying property, no threats about money or custody.</label>
+        <label class="check"><input type="checkbox"> Each of us has at least one supportive person outside the marriage, and we accept that those people are not neutral.</label>
+        <label class="check"><input type="checkbox"> We will reassess at ninety days rather than requiring an answer now.</label>
+      </div>
+      <div class="fieldrow" style="margin-top:1.2rem;">
+        <div><label class="f">Agreed by</label><input type="text" data-save="agree-name-a" placeholder="Name"></div>
+        <div><label class="f">Date</label><input type="date" data-save="agree-date-a"></div>
+      </div>
+      <div class="fieldrow" style="margin-top:.8rem;">
+        <div><label class="f">Agreed by</label><input type="text" data-save="agree-name-b" placeholder="Name"></div>
+        <div><label class="f">Date</label><input type="date" data-save="agree-date-b"></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Four questions, all the way through</h3>
+    <div class="prose"><p>When a conversation starts to come apart — and they will — return to these. They are the spine of the entire course.</p></div>
+    <div class="q-four">
+      <div><div class="qn">1</div><div><h4>What is happening in me?</h4><p>Name the emotion, the thought, the body sensation, and the urge, before acting on any of them.</p></div></div>
+      <div><div class="qn">2</div><div><h4>What is my part?</h4><p>Own your choices, reactions, avoidance, defensiveness, escalation. The betrayed partner's part is never the affair.</p></div></div>
+      <div><div class="qn">3</div><div><h4>What does my partner need to understand?</h4><p>Say the experience underneath the accusation, the defense, or the demand.</p></div></div>
+      <div><div class="qn">4</div><div><h4>What would move us toward clarity?</h4><p>Choose the next useful behavior: disclose, listen, pause, apologize, set a boundary, get help, or schedule the conversation for a time you can both hold.</p></div></div>
+    </div>
+
+    <div class="pull">The aim is not to erase what happened. It is to find out whether you can build a relationship in which <span>truth, accountability, connection, and integrity</span> are stronger than they were before the rupture.</div>
+  </div>
+</section>
+<section id="m1">
+  <div class="wrap plate">
+    <div class="num">Module One</div>
+    <h2>Stop the Bleeding</h2>
+    <p class="obj">Objective: create enough stability that both of you can think again.</p>
+    <div class="contents">
+      <div><span>1.1</span>Find what is still bleeding</div>
+      <div><span>1.2</span>Boundaries that hold</div>
+      <div><span>1.3</span>Flooding and the twenty-minute rule</div>
+      <div><span>1.4</span>Keep the machine running</div>
+      <div><span>1.5</span>Who else knows, and who needs to</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <article class="lesson" data-lesson="1.1">
+      <div class="lesson-head"><span class="id">1.1</span><h3>Find what is still bleeding</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>An affair is one injury. What follows the affair is often a series of smaller injuries that keep the wound open: contact that hasn't actually ended, a second version of the story that contradicts the first, a receipt found three weeks later, a phone checked at 2 a.m., an argument that ends with someone saying the thing they can't take back.</p>
+          <p>Recovery research consistently finds that repeated discovery — learning the truth in installments — does more sustained damage than the original disclosure. Each new fragment resets the clock and teaches the betrayed partner's nervous system that reality is unstable and that more is coming. Before anything else can be worked on, the leaking has to stop.</p>
+          <p>Notice that most of this list is not about the affair. It is about what the two of you are doing now, in week two or week six, that is making the next month harder than it has to be.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>You are not trying to feel better this week. You are trying to stop making it worse.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>What is still causing damage</h4><span class="kind">Tool 1.1</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Check anything happening now. Both partners answer.</p>
+          <div class="checks cols" data-save="bleeding">
+            <label class="check"><input type="checkbox"> Contact with the affair partner has not fully ended</label>
+            <label class="check"><input type="checkbox"> Information is still coming out in pieces</label>
+            <label class="check"><input type="checkbox"> Details have changed between tellings</label>
+            <label class="check"><input type="checkbox"> Searching phones, accounts, or locations daily</label>
+            <label class="check"><input type="checkbox"> Interrogation that goes past exhaustion</label>
+            <label class="check"><input type="checkbox"> Contempt, name-calling, threats to leave used as leverage</label>
+            <label class="check"><input type="checkbox"> Drinking or substance use has increased</label>
+            <label class="check"><input type="checkbox"> Told people in anger that we now have to manage</label>
+            <label class="check"><input type="checkbox"> Sleeping arrangements change nightly with no agreement</label>
+            <label class="check"><input type="checkbox"> Children have overheard or been told details</label>
+            <label class="check"><input type="checkbox"> Major decisions being made mid-argument</label>
+            <label class="check"><input type="checkbox"> Sex used to prove something to either of us</label>
+          </div>
+          <div class="fieldset" style="margin-top:1.3rem;">
+            <div><label class="f">The one on this list doing the most damage right now</label><textarea data-save="b-worst" rows="2"></textarea></div>
+            <div><label class="f">What specifically stops this week — a behavior, not an intention</label><textarea data-save="b-stop" rows="3"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="1.1"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="1.2">
+      <div class="lesson-head"><span class="id">1.2</span><h3>Boundaries that hold</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>A boundary is not a feeling or a request for reassurance. It is a specific, observable rule about behavior, with a stated consequence, that the person setting it can actually enforce. "I need you to be honest with me" is a wish. "Any message from her gets shown to me the day it arrives, and if I find one you didn't show me, we're going back to a counselor before we talk about anything else" is a boundary.</p>
+          <p>Structural family work has long held that a couple in crisis needs its perimeter re-drawn before its interior can be repaired — the third person has to be outside the system, definitively, before the two people inside it can face each other. Where the affair partner is a coworker, a friend, or someone in a shared community, "ending contact" requires a plan with details: what happens at work, what happens if they appear at an event, what gets said, who gets told.</p>
+          <p>Write no-contact as an action, not a promise. If it requires changing a number, leaving a group, changing a shift, or telling a supervisor, name that here.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>A boundary the betrayed partner has to police is not yet a boundary. It is surveillance with extra steps.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Affair Boundary Agreement</h4><span class="kind">Tool 1.2</span></div>
+          <div class="fieldset">
+            <div><label class="f">Contact with the affair partner ends how, exactly <span class="hint">— blocked numbers, deleted accounts, changed routine, a single final message sent with both of us present</span></label><textarea data-save="ba-contact" rows="3"></textarea></div>
+            <div><label class="f">Unavoidable contact (work, shared spaces, children's activities) will be handled by</label><textarea data-save="ba-unavoid" rows="2"></textarea></div>
+            <div><label class="f">If contact happens anyway, it gets disclosed by <span class="hint">— when, and how</span></label><textarea data-save="ba-disclose" rows="2"></textarea></div>
+            <div><label class="f">Access and transparency we're agreeing to for now <span class="hint">— devices, locations, accounts, schedules</span></label><textarea data-save="ba-access" rows="3"></textarea></div>
+            <div><label class="f">Decisions we are postponing for ninety days</label><textarea data-save="ba-postpone" rows="2"></textarea></div>
+            <div class="fieldrow">
+              <div><label class="f">We review this agreement on</label><input type="date" data-save="ba-review"></div>
+              <div><label class="f">If it's broken, the agreed next step is</label><input type="text" data-save="ba-breach" placeholder="e.g. session with a counselor before anything else"></div>
+            </div>
+          </div>
+          <div class="note" style="margin-top:1.5rem;">
+            <h4>On transparency with an end date</h4>
+            <p>Open access to phones and accounts can steady the first months. It cannot be the permanent architecture of the relationship — a marriage held together by monitoring eventually runs on vigilance rather than trust. Give the arrangement a review date now, in Module 4, rather than discovering in a year that neither of you knows how to end it.</p>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="1.2"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="1.3">
+      <div class="lesson-head"><span class="id">1.3</span><h3>Flooding and the twenty-minute rule</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>In Gottman's observational research, partners in conflict frequently reach a state he called diffuse physiological arousal — heart rate climbing past roughly 100 beats per minute, stress hormones rising, peripheral vision narrowing. In that state, access to humor, memory, problem-solving, and empathy measurably drops. People flooded in this way are not choosing to be unreasonable; the equipment for reasonableness is temporarily offline.</p>
+          <p>Two things follow. First, nothing said in that state should be treated as the final word — not the confession, not the accusation, not "I'm done." Second, recovering takes real time. Twenty to thirty minutes of genuine distraction is the working figure; two minutes of standing in the kitchen rehearsing your rebuttal is not a break, it is a countdown.</p>
+          <p>Flooding shows up differently in each partner. One escalates, pursues, keeps talking, needs the answer now. The other goes flat, quiet, and unreachable — which reads as indifference and usually is not. Both are the same physiology going in opposite directions.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>A time-out is not abandonment when it comes with a return time. Without one, it is.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="split">
+          <div><h4>If you flood by escalating</h4><p>Your urge is to keep going until it's resolved. It won't resolve in this state; it will get said in a way you'll have to repair later.</p><p>Practice: say the exact words "I need twenty minutes, and I'll come back at 8:40," and then leave the room without the parting shot.</p></div>
+          <div><h4>If you flood by shutting down</h4><p>Your system is protecting you by going still. To your partner it looks like you don't care, which raises the volume, which shuts you down further.</p><p>Practice: before you go quiet, say "I'm going offline, not walking away — give me twenty minutes."</p></div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>Trigger and Regulation Plan</h4><span class="kind">Tool 1.3</span></div>
+          <div class="fieldset">
+            <div><label class="f">My earliest physical sign that I'm flooding <span class="hint">— jaw, chest, hands, heat, tunnel vision, hollowness</span></label><textarea data-save="reg-sign" rows="2"></textarea></div>
+            <div><label class="f">The signal or phrase we'll use to call a pause <span class="hint">— agree on one, and never use it sarcastically</span></label><input type="text" data-save="reg-signal"></div>
+            <div><label class="f">What I'll actually do during the pause <span class="hint">— walk, shower, cold water, a chore with your hands, slow exhales; not rehearsing, not texting a friend about it</span></label><textarea data-save="reg-do" rows="2"></textarea></div>
+            <div><label class="f">How long, and when I come back</label><input type="text" data-save="reg-return" placeholder="20 minutes, and I say so out loud when I return"></div>
+          </div>
+          <div class="note">
+            <h4>A physiological reset that works in ninety seconds</h4>
+            <p>Two inhales through the nose — a full one, then a second short one on top of it — followed by a long, slow exhale through the mouth. Repeat five or six times. This pattern shifts the balance toward the parasympathetic side faster than trying to think your way calm, and it can be done standing in a hallway without anyone noticing.</p>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="1.3"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="1.4">
+      <div class="lesson-head"><span class="id">1.4</span><h3>Keep the machine running</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Betrayal reliably disrupts sleep, appetite, concentration, and the sense that the world is predictable. Intrusive images, hypervigilance, and sudden waves of grief or rage are common responses to a relational injury of this size — not evidence that someone is weak or "not over it."</p>
+          <p>The practical problem is that every skill this course asks for — regulation, listening, honest answering, judgment about your own future — degrades sharply when you are not sleeping and not eating. Couples routinely try to do the hardest emotional work of their lives at 1 a.m. on four hours of sleep, and then conclude from how badly it went that the relationship is unsalvageable.</p>
+          <p>Guard the basics for the next month the way you would guard them for someone recovering from surgery. Also guard the perimeter: work performance, parenting, and your own health are what you will still need whichever way this goes.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Nothing important gets decided after 10 p.m. Write it down, and take it to a time when you're both awake.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Daily Stabilization Checklist</h4><span class="kind">Tool 1.4</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.4rem;">Print this one. Check it at the end of each day for two weeks — the point is the pattern, not the score.</p>
+          <div class="table-scroll">
+          <table class="grid">
+            <thead><tr><th>Day</th><th>Slept 6+ hrs</th><th>Ate 2+ meals</th><th>Moved my body</th><th>Talked to one supportive person</th><th>Kept the boundary agreement</th><th>Hardest hour of the day</th></tr></thead>
+            <tbody id="stabrows"></tbody>
+          </table>
+          </div>
+          <div class="fieldset" style="margin-top:1.2rem;">
+            <div><label class="f">One thing I am dropping for the next month so the basics hold</label><textarea data-save="stab-drop" rows="2"></textarea></div>
+            <div><label class="f">Who I can call at 11 p.m. that isn't my partner</label><input type="text" data-save="stab-person"></div>
+          </div>
+        </div>
+        <div class="caution">
+          <h4>When to bring in a professional now, not later</h4>
+          <p>Sleep that has not returned after two weeks, panic that interrupts work or driving, drinking that has increased since discovery, an inability to eat, thoughts of harming yourself, or a child showing distress at school — these are reasons to get individual support alongside this material, not signs that you are handling it badly.</p>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="1.4"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="1.5">
+      <div class="lesson-head"><span class="id">1.5</span><h3>Who else knows, and who needs to</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>A couple sits inside layers of other systems — children, extended family, friendships, a workplace, sometimes a congregation. Each of those layers responds to the news in ways that will still be in effect long after the two of you have moved on, which is why disclosure decisions made in the first week are so often regretted.</p>
+          <p>Three questions clarify most of them. Does this person need the information to stay safe or make an informed decision? Can this person hold it without becoming an actor in our marriage? And can I un-tell them later? The answer to the third is always no.</p>
+          <p>Children are the sharpest case. They almost always know something is wrong and are usually served by an honest, developmentally appropriate acknowledgment — "we're having a hard time, we're working on it, it isn't your fault, and both of us still take care of you" — and almost never served by the details, by being asked to choose, or by carrying messages. Age, what they have already overheard, and whether the family structure is changing all shift what to say.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Every person you tell becomes part of the decision. Choose them the way you'd choose a jury.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Disclosure Map</h4><span class="kind">Tool 1.5</span></div>
+          <div class="table-scroll">
+          <table class="grid">
+            <thead><tr><th>Person</th><th>Already knows?</th><th>Needs to know because</th><th>What we say — agreed wording</th></tr></thead>
+            <tbody id="discrows"></tbody>
+          </table>
+          </div>
+          <div class="fieldset" style="margin-top:1.2rem;">
+            <div><label class="f">What we tell the children, in the words we'll actually use</label><textarea data-save="disc-kids" rows="3"></textarea></div>
+            <div><label class="f">What we have already told people that we now need to manage</label><textarea data-save="disc-manage" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="1.5"> Mark lesson complete</label>
+    </article>
+
+    <div class="pull">Stability is not the same as peace. This module is finished when the injuries have stopped arriving — <span>not when it stops hurting.</span></div>
+  </div>
+</section>
+<section id="m2">
+  <div class="wrap plate">
+    <div class="num">Module Two</div>
+    <h2>Understand What Happened</h2>
+    <p class="obj">Objective: seek understanding without diluting responsibility.</p>
+    <div class="contents">
+      <div><span>2.1</span>Responsibility comes before explanation</div>
+      <div><span>2.2</span>The relationship before the affair</div>
+      <div><span>2.3</span>What each of you brought with you</div>
+      <div><span>2.4</span>Guilt builds, shame collapses</div>
+      <div><span>2.5</span>A story you can both live with</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <article class="lesson" data-lesson="2.1">
+      <div class="lesson-head"><span class="id">2.1</span><h3>Responsibility comes before explanation</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>There is a sequence here that cannot be reversed without damage. The partner who had the affair takes full ownership of the choices and the consequences first. Only then does the question of how it became possible get opened. Reversing the order — leading with loneliness, with the marriage, with what wasn't happening at home — converts an explanation into a bill, and the betrayed partner hears, correctly, that they are being charged for their own injury.</p>
+          <p>Terry Real's relational work puts it bluntly: the person who did the harm holds the harm, whole, without a co-signer. Unhappiness in a marriage explains a decision to complain, to demand change, to seek therapy, to leave. It does not explain a decision to deceive. That step was taken alone.</p>
+          <p>Full ownership has a recognizable shape. It names the specific behavior rather than "what happened." It doesn't hedge with "if I hurt you." It doesn't include the word but. It states the impact from the other person's side. And it doesn't ask, in the same breath, for anything back — not absolution, not credit, not an end to the subject.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Context explains vulnerability. It never transfers responsibility. Both partners have to be able to hold that sentence for this module to work.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Explanation or Excuse</h4><span class="kind">Tool 2.1</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">The involved partner writes the honest reasons in the left column. Together, sort each one: does it describe a vulnerability I had, or does it hand part of the responsibility to my partner? Anything in the right column gets rewritten until it belongs on the left.</p>
+          <div class="fieldset">
+            <div><label class="f">Vulnerability — true about me <span class="hint">e.g. "I avoid conflict and told myself resentment was easier than a hard conversation."</span></label><textarea data-save="e-vuln" rows="5"></textarea></div>
+            <div><label class="f">Excuse — assigns cause to my partner <span class="hint">e.g. "You were always with the kids." Rewrite it: what did I do instead of saying so?</span></label><textarea data-save="e-excuse" rows="4"></textarea></div>
+          </div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>The Ownership Statement</h4><span class="kind">Tool 2.2</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Written by the partner who had the affair. Draft it here, revise it more than once, and read it aloud only when it can be read without defending it.</p>
+          <div class="fieldset">
+            <div><label class="f">What I did, in plain specifics — no euphemism</label><textarea data-save="own-what" rows="3"></textarea></div>
+            <div><label class="f">What I did to conceal it, and for how long</label><textarea data-save="own-conceal" rows="2"></textarea></div>
+            <div><label class="f">What I understand it cost you <span class="hint">— not what it cost me</span></label><textarea data-save="own-cost" rows="3"></textarea></div>
+            <div><label class="f">What I am not asking you for right now</label><textarea data-save="own-notasking" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="2.1"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="2.2">
+      <div class="lesson-head"><span class="id">2.2</span><h3>The relationship before the affair</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Most marriages that end up here were not in open warfare. Far more often they were quietly drifting: two people managing logistics, avoiding a few subjects, each waiting for the other to reach first. Gottman's term for the slow tilt is negative sentiment override — the point at which neutral behavior starts being read as evidence of not caring, and repair attempts stop landing.</p>
+          <p>Underneath it there is usually a cycle. One partner presses for contact — asks, criticizes, escalates — because the silence feels like distance. The other withdraws, placates, or goes flat because the pressing feels like failing. Each move makes the other's more likely. Emotionally focused therapy calls this the negative cycle and treats it, not either partner, as the problem in the room. Systemic therapists make the same point about circularity: in a loop, there is no first move to find.</p>
+          <p>Two cautions. Mapping the cycle is not the same as splitting the blame — the cycle explains distance, not deception. And this is not the betrayed partner's chance to be told what they did wrong. It is a joint description of a pattern that had both of you in it, produced with far more care about how it lands than a normal argument would require.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>The cycle is the problem. Neither of you is the problem — and the affair is still one person's choice.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="split">
+          <div><h4>When I feel the distance, I tend to</h4><p>Press, ask again, criticize, check, explain at length, bring it up at the worst time, get louder, get sharper.</p></div>
+          <div><h4>When I feel the pressure, I tend to</h4><p>Go quiet, agree to end it, work later, scroll, promise, leave the room, say nothing and decide something.</p></div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>Relationship Timeline</h4><span class="kind">Tool 2.3</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Both partners fill this in separately, then compare. Differences in what each of you marked are the most useful part.</p>
+          <div class="table-scroll">
+          <table class="grid">
+            <thead><tr><th>When</th><th>What happened — event, loss, move, birth, illness, job</th><th>What it did to us</th></tr></thead>
+            <tbody id="tlrows"></tbody>
+          </table>
+          </div>
+          <div class="fieldset" style="margin-top:1.2rem;">
+            <div><label class="f">When did we stop reaching for each other, and what did we do instead?</label><textarea data-save="tl-stop" rows="3"></textarea></div>
+            <div><label class="f">Our cycle in one sentence <span class="hint">— "The more I ______, the more you ______, and the further apart we get."</span></label><textarea data-save="tl-cycle" rows="2"></textarea></div>
+            <div><label class="f">What each of us did to try to fix it that the other didn't see</label><textarea data-save="tl-repair" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="2.2"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="2.3">
+      <div class="lesson-head"><span class="id">2.3</span><h3>What each of you brought with you</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>People arrive in a marriage carrying instructions written long before it. Bowen's central idea is differentiation — the capacity to stay yourself while staying connected, to tolerate someone else's disappointment without either collapsing into it or cutting off from it. Under stress, low differentiation shows up as fusion, distance, or a third party pulled in to absorb the pressure. An affair is one of the most common third points a couple recruits.</p>
+          <p>Satir described the postures people take when their sense of self is threatened: placating, blaming, going hyper-rational, or distracting. Each is a survival move learned somewhere. Most of us can name our own in about ten seconds and our partner's even faster.</p>
+          <p>This lesson asks the involved partner for the harder inventory — entitlement, secrecy as a habit, validation-seeking, conflict avoidance, impulsivity, an old belief that needs are shameful. It also asks the betrayed partner to look at their own patterns, but for a strictly different reason: not to explain the affair, but because the same patterns will shape how the next several months go, and because you are entitled to your own work regardless of what happens to the marriage.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Doing your own work is not conceding a point. It is refusing to leave your future in the hands of what happened to you.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Individual Vulnerability Inventory</h4><span class="kind">Tool 2.4</span></div>
+          <div class="checks cols" data-save="vuln">
+            <label class="check"><input type="checkbox"> I avoid conflict until it leaks out sideways</label>
+            <label class="check"><input type="checkbox"> I keep things private that a partner would want to know</label>
+            <label class="check"><input type="checkbox"> Attention from outside steadies me</label>
+            <label class="check"><input type="checkbox"> I decide what my partner can handle and edit accordingly</label>
+            <label class="check"><input type="checkbox"> I go along, then resent it</label>
+            <label class="check"><input type="checkbox"> I criticize when I want closeness</label>
+            <label class="check"><input type="checkbox"> I believe having needs is weak</label>
+            <label class="check"><input type="checkbox"> I get scornful when I'm hurt</label>
+            <label class="check"><input type="checkbox"> I confuse being wanted with being loved</label>
+            <label class="check"><input type="checkbox"> I withdraw and call it keeping the peace</label>
+            <label class="check"><input type="checkbox"> I make my own rules quietly when I feel unfairly treated</label>
+            <label class="check"><input type="checkbox"> I don't ask; I wait to be noticed</label>
+          </div>
+          <div class="fieldset" style="margin-top:1.3rem;">
+            <div><label class="f">Where did I learn this? <span class="hint">— family of origin, an earlier relationship, a period of my life</span></label><textarea data-save="v-learn" rows="3"></textarea></div>
+            <div><label class="f">Under pressure I placate / blame / go rational / distract <span class="hint">— which, and what does it look like at home?</span></label><textarea data-save="v-stance" rows="2"></textarea></div>
+            <div><label class="f">What my parents' marriage taught me about honesty, conflict, and what you do with unhappiness</label><textarea data-save="v-origin" rows="3"></textarea></div>
+            <div><label class="f">The one pattern I am taking into individual work, whatever we decide about the marriage</label><textarea data-save="v-work" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="2.3"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="2.4">
+      <div class="lesson-head"><span class="id">2.4</span><h3>Guilt builds, shame collapses</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Guilt says I did something harmful. Shame says I am something harmful. The first keeps a person facing outward, toward the damage and the repair. The second turns them inward, and what comes out of that turn is nearly always one of three things: defensiveness, collapse, or disappearance.</p>
+          <p>This matters practically, because a shame-flooded partner cannot listen. Halfway through hearing what they cost someone, they slide into self-attack, and the conversation reorganizes itself around comforting them. The betrayed partner then discovers they cannot describe their own injury without having to manage the other person's despair — and stops describing it.</p>
+          <p>Shame also has a mirror on the other side. Betrayed partners frequently report feeling foolish for not knowing, ashamed of still wanting the relationship, ashamed of the rage, ashamed of checking a phone at 3 a.m. None of that is a character flaw. It is what happens when the person who was your safest place became the source of the injury.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>"I'm a terrible person" ends the conversation. "Here is what I did to you, and I'm not going anywhere" continues it.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Shame Translation</h4><span class="kind">Tool 2.5</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Rewrite each shame sentence as an accountability sentence. The test: does the new version keep you in the room and keep the focus on the harm rather than on your character?</p>
+          <div class="fieldset">
+            <div><label class="f">What I say to myself when it hits</label><textarea data-save="sh-self" rows="3"></textarea></div>
+            <div><label class="f">The same thing, stated as what I did and what I owe</label><textarea data-save="sh-account" rows="3"></textarea></div>
+            <div><label class="f">What I do when shame floods me <span class="hint">— defend, spiral, go cold, leave, over-apologize</span></label><textarea data-save="sh-behavior" rows="2"></textarea></div>
+            <div><label class="f">What I'll do instead, agreed with my partner</label><textarea data-save="sh-instead" rows="2"></textarea></div>
+          </div>
+        </div>
+        <div class="caution">
+          <h4>For the betrayed partner</h4>
+          <p>You are not responsible for managing your partner's shame, and you should not have to soften an account of your own injury to keep them upright. If every attempt to describe what this did to you ends with you consoling them, name that as a pattern and take it to a therapist — it will not resolve on its own.</p>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="2.4"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="2.5">
+      <div class="lesson-head"><span class="id">2.5</span><h3>A story you can both live with</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Betrayal breaks the story. The account you had of your marriage — who your partner was, what the last two years were, whether the anniversary trip was real — no longer holds, and until something coherent replaces it, the mind keeps going back to reconstruct it. That is what the 3 a.m. questions are: not curiosity, but an attempt to make reality stable again.</p>
+          <p>Narrative therapists work by separating the problem from the person and then thickening the account — filling in what else was true, what was resisted, what the person's actual values were, so the story has more in it than the worst chapter. A shared narrative after an affair needs four things: what happened, what made it possible, what it damaged, and what has to change. Sufficient truth, not a forensic transcript.</p>
+          <p>There is a real difference between the details that restore reality and the details that only supply images. Duration, whether it was one person or several, whether there was risk to your health, whether money was spent, whether people you know were involved, whether it was over before you found out — these bear on decisions you have a right to make. Choreography does not, and once described, it does not leave.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>You are not owed every image. You are owed a version of reality you can stand on.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Shared Narrative Worksheet</h4><span class="kind">Tool 2.6</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Draft separately, then build one version together. Expect several passes over several weeks. When it stops changing much, it is done.</p>
+          <div class="fieldset">
+            <div><label class="f">What happened</label><textarea data-save="nar-what" rows="3"></textarea></div>
+            <div><label class="f">What made it possible <span class="hint">— in me, in us, in the circumstances; in that order</span></label><textarea data-save="nar-possible" rows="3"></textarea></div>
+            <div><label class="f">What it damaged <span class="hint">— trust, health, family, faith, the way you see your own past</span></label><textarea data-save="nar-damage" rows="3"></textarea></div>
+            <div><label class="f">What has to be different, permanently</label><textarea data-save="nar-change" rows="3"></textarea></div>
+            <div><label class="f">What was also true in these years that the affair does not erase</label><textarea data-save="nar-also" rows="3"></textarea></div>
+          </div>
+        </div>
+        <div class="note">
+          <h4>A working rule for questions</h4>
+          <p>Before asking, sort it: does the answer change a decision I have to make, or does it give me a picture I will carry? Ask the first kind directly and expect a full answer. Hold the second kind for Module 3, where you'll build a three-list system for handling them rather than swallowing or firing them at 1 a.m.</p>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="2.5"> Mark lesson complete</label>
+    </article>
+
+    <div class="pull">Understanding is not absolution. It is the difference between <span>"I don't know why he did it"</span> and knowing exactly what would have to change for it never to happen again.</div>
+  </div>
+</section>
+<section id="m3">
+  <div class="wrap plate">
+    <div class="num">Module Three</div>
+    <h2>Learning to Talk Again</h2>
+    <p class="obj">Objective: make painful conversations structured instead of destructive.</p>
+    <div class="contents">
+      <div><span>3.1</span>Build the container</div>
+      <div><span>3.2</span>Say the thing underneath</div>
+      <div><span>3.3</span>Validation is not agreement</div>
+      <div><span>3.4</span>Questions, and the three lists</div>
+      <div><span>3.5</span>Repair after it goes wrong</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <article class="lesson" data-lesson="3.1">
+      <div class="lesson-head"><span class="id">3.1</span><h3>Build the container</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Couples in the months after discovery tend to talk about the affair in one of two ways: constantly and without shape, or not at all until it erupts. Both leave the same residue — the sense that the subject is bottomless and that any evening can be lost to it.</p>
+          <p>A container fixes what an open-ended conversation cannot. It has a stated purpose, a start and a stop, one topic, and an agreed way to end early. Twenty minutes is long enough to say something real and short enough that both partners can stay regulated inside it. Ending on time, especially when it is going badly, is itself the practice: it teaches both nervous systems that this subject has edges.</p>
+          <p>Schedule these. Ambushes — at the door, in the car with children present, at midnight — reliably produce the worst version of both of you. If something surfaces between scheduled talks, write it down and bring it to the next one; the writing itself does a surprising amount of the work.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Not every question has to be answered tonight. A subject with a scheduled time is not a subject being avoided.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Twenty-Minute Conversation Guide</h4><span class="kind">Tool 3.1</span></div>
+          <div class="prose" style="font-size:.94rem;">
+            <p><strong>Before.</strong> Agree the one topic. Agree who speaks first. Both partners eat something and neither starts while flooded.</p>
+            <p><strong>Minutes 1–8.</strong> First partner speaks. The other listens without rebutting, then reflects back what they heard until the speaker says "that's it."</p>
+            <p><strong>Minutes 9–16.</strong> Switch. Same rules, including the reflection.</p>
+            <p><strong>Minutes 17–20.</strong> One agreement about the coming week, or an honest "we're not there yet." Set the next talk before you stand up.</p>
+            <p><strong>Any time.</strong> Either partner can call the pause signal from Tool 1.3. The conversation resumes at the stated time, not whenever it comes up again.</p>
+          </div>
+          <div class="timer">
+            <div class="clock" id="clock">20:00</div>
+            <button class="btn btn-primary" id="tstart">Start</button>
+            <button class="btn" id="treset">Reset</button>
+            <span class="saved-flag" id="tnote">Half for each of you</span>
+          </div>
+          <div class="fieldset" style="margin-top:1.3rem;">
+            <div class="fieldrow">
+              <div><label class="f">Our standing time for these</label><input type="text" data-save="c-when" placeholder="e.g. Tuesday and Sunday, 8 p.m."></div>
+              <div><label class="f">Where <span class="hint">— not the bedroom</span></label><input type="text" data-save="c-where"></div>
+            </div>
+            <div><label class="f">Topics waiting for the next one</label><textarea data-save="c-parking" rows="3"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="3.1"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="3.2">
+      <div class="lesson-head"><span class="id">3.2</span><h3>Say the thing underneath</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Gottman's finding on start-up is one of the sturdiest in couples research: how a difficult conversation begins predicts how it ends, and it predicts it within the first few minutes. A conversation that opens with contempt or a global accusation rarely recovers, however reasonable the middle is.</p>
+          <p>Underneath most accusations is something more accurate and much more exposed. Under "you don't even care what you did to me" is usually <em>I'm terrified this is who you are.</em> Under "you're still interrogating me" is usually <em>I don't know how to be forgiven and I'm afraid this is permanent.</em> Satir called the honest, non-defensive posture leveling: standing in what is actually true for you without attacking or shrinking.</p>
+          <p>This is not a request to be nice. Anger is legitimate here and does not need to be laundered. The request is to be accurate — to lead with the injury rather than the verdict, because the verdict is the part your partner will defend against and the injury is the part they can actually respond to.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Lead with the wound, not the case for the prosecution. The case gets defended; the wound gets answered.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Underneath</h4><span class="kind">Tool 3.2</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Take the sentence you have said most often in the last month. Work down through it before the next scheduled talk.</p>
+          <div class="fieldset">
+            <div><label class="f">What I say</label><textarea data-save="u-say" rows="2"></textarea></div>
+            <div><label class="f">What I feel when I say it <span class="hint">— one word: afraid, ashamed, alone, furious, invisible</span></label><input type="text" data-save="u-feel"></div>
+            <div><label class="f">What I am actually afraid is true</label><textarea data-save="u-fear" rows="2"></textarea></div>
+            <div><label class="f">What I would say if I were sure it wouldn't be used against me</label><textarea data-save="u-honest" rows="3"></textarea></div>
+            <div><label class="f">What I need from you in response <span class="hint">— be specific enough that they could do it</span></label><textarea data-save="u-need" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="3.2"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="3.3">
+      <div class="lesson-head"><span class="id">3.3</span><h3>Validation is not agreement</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>The most common listening failure after an affair is defending the facts. The betrayed partner says "you were gone every Thursday for months," the involved partner says "it was four times," and the conversation dies on a technicality while the actual message — <em>I have been re-reading my own life and finding holes in it</em> — goes unanswered.</p>
+          <p>Emotionally focused work treats the listener's job as reaching for the emotion under the content and reflecting it accurately enough that the speaker feels met. You are not conceding a fact by saying "you looked at the calendar and every Thursday turned into a question." You are confirming that their experience registered.</p>
+          <p>Accuracy matters more than warmth here. "I hear you" without content reads as management. Reflect the specific thing, name the feeling you think is under it, and then ask whether you got it right — and be willing to be told you didn't.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Correcting the facts before acknowledging the feeling is how a defensible position loses a marriage.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="split">
+          <div><h4>The listener's four moves</h4><p>Reflect the specific thing they said. Name the feeling you think is under it. Ask if you got it right. Only then, if it matters, offer your correction — as information, not as a defense.</p></div>
+          <div><h4>What kills it</h4><p>"That's not what happened." "You always exaggerate." "I've apologized a hundred times." Silence with a flat face. Apologizing so fast that nothing has to be heard.</p></div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>Reflection Practice</h4><span class="kind">Tool 3.3</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Do this once, out loud, in a scheduled talk. Then write what happened.</p>
+          <div class="fieldset">
+            <div><label class="f">What my partner said, in their words as best I can render them</label><textarea data-save="r-said" rows="2"></textarea></div>
+            <div><label class="f">The feeling I think was underneath it</label><input type="text" data-save="r-feel"></div>
+            <div><label class="f">What they told me I got wrong</label><textarea data-save="r-wrong" rows="2"></textarea></div>
+            <div><label class="f">What was hard about not defending myself</label><textarea data-save="r-hard" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="3.3"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="3.4">
+      <div class="lesson-head"><span class="id">3.4</span><h3>Questions, and the three lists</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Questions after betrayal are not one thing. Some restore reality and support decisions the betrayed partner is entitled to make. Some are attempts to find the moment where it could have been prevented — a search that never ends because that moment does not exist. Some are self-injury: requests for images that will be replayed for years.</p>
+          <p>A three-list system gives the questions somewhere to go. Ask now: the ones that bear on health, safety, money, exposure, whether it is truly over, and who else knows. Ask later: the ones about meaning — what he thought about, whether she compared, what it says about the marriage — which land better once the account in Module 2 exists. Don't ask: the ones you already know will lodge in your mind permanently.</p>
+          <p>The involved partner's obligation is to answer the first list completely and without editing, including the parts that make them look worse, and to keep answering later questions without sighing about having answered before. Repetition is not always interrogation. Sometimes it is a nervous system checking whether the answer is still the same — and it will keep checking until the answer has been consistent for a long time.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Ask what you need to know to make decisions. Be careful about what you need to know to torture yourself with.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>The Three Lists</h4><span class="kind">Tool 3.4</span></div>
+          <div class="fieldset">
+            <div><label class="f">Ask now <span class="hint">— health, money, exposure, whether it's over, who knows, anything still undisclosed</span></label><textarea data-save="q-now" rows="4"></textarea></div>
+            <div><label class="f">Ask later <span class="hint">— meaning, feelings, what it says about us; revisit at ninety days</span></label><textarea data-save="q-later" rows="4"></textarea></div>
+            <div><label class="f">Not asking <span class="hint">— written down here so it stops circling, and reviewed with a therapist rather than at 1 a.m.</span></label><textarea data-save="q-never" rows="3"></textarea></div>
+          </div>
+          <div class="note">
+            <h4>For the partner answering</h4>
+            <p>Answer the whole question, once, in full. Do not release information in the smallest survivable increments — that is the pattern that made the first months unbearable. If you genuinely do not know or do not remember, say that plainly instead of inventing something plausible; a discovered invention costs more than the original gap.</p>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="3.4"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="3.5">
+      <div class="lesson-head"><span class="id">3.5</span><h3>Repair after it goes wrong</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Some conversations will go badly. The measure that matters is not whether you escalate but how long it takes to come back and what condition the relationship is in when you do. Gottman's work on repair attempts found that the couples who last are not the ones who avoid rupture; they are the ones whose repair attempts get received — a joke, a hand, "I'm sorry, that was a low shot, can we start over."</p>
+          <p>A repair after an affair has an additional demand. The involved partner has to be able to hear "this is because of what you did" without treating each mention as a fresh attack, for considerably longer than feels fair. The betrayed partner has to be able to distinguish a bad hour from a verdict, and to say what happened in the escalation that was theirs.</p>
+          <p>The most useful sentence either of you can learn is the one that names the pattern instead of the person: "We're in it again." It is the same move as calling the cycle the problem, deployed live, at the moment it is happening.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Recovery is not the absence of bad nights. It is bad nights that get shorter, and mornings that come back.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Repair Script</h4><span class="kind">Tool 3.5</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Write your own words now, while calm. Read them from the page later, when you are not.</p>
+          <div class="fieldset">
+            <div><label class="f">My phrase for naming the cycle in the moment</label><input type="text" data-save="rep-name" placeholder="e.g. We're in it again. Can we stop?"></div>
+            <div><label class="f">What I own about how the last hard conversation went <span class="hint">— my tone, my timing, my withdrawal, my sarcasm</span></label><textarea data-save="rep-own" rows="2"></textarea></div>
+            <div><label class="f">How I come back <span class="hint">— the first sentence when I return to the room</span></label><textarea data-save="rep-return" rows="2"></textarea></div>
+            <div><label class="f">What helps me receive a repair attempt when I'm still angry</label><textarea data-save="rep-receive" rows="2"></textarea></div>
+          </div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>Weekly Check-In</h4><span class="kind">Tool 3.6</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">Twenty minutes, same time each week, for the rest of the course. Five questions, both partners.</p>
+          <div class="fieldset">
+            <div><label class="f">One thing that was hard this week</label><textarea data-save="w-hard" rows="2"></textarea></div>
+            <div><label class="f">One thing you did that I noticed and it helped</label><textarea data-save="w-noticed" rows="2"></textarea></div>
+            <div><label class="f">Anything I need to disclose that hasn't been said</label><textarea data-save="w-disclose" rows="2"></textarea></div>
+            <div><label class="f">One request for next week, specific and doable</label><textarea data-save="w-request" rows="2"></textarea></div>
+            <div><label class="f">Where we are on the boundary agreement <span class="hint">— kept, slipped, needs changing</span></label><textarea data-save="w-boundary" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="3.5"> Mark lesson complete</label>
+    </article>
+
+    <div class="pull">You are not trying to have painless conversations. You are trying to have conversations that <span>end better than they used to</span> — and that both of you are still willing to have next week.</div>
+  </div>
+</section>
+<section id="m4">
+  <div class="wrap plate">
+    <div class="num">Module Four</div>
+    <h2>Rebuilding Trust</h2>
+    <p class="obj">Objective: replace reassurance with evidence.</p>
+    <div class="contents">
+      <div><span>4.1</span>Trust is a behavior, not a feeling</div>
+      <div><span>4.2</span>Transparency with an exit</div>
+      <div><span>4.3</span>The line that isn't straight</div>
+      <div><span>4.4</span>Intimacy at a pace you can both consent to</div>
+      <div><span>4.5</span>Measuring repair</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <article class="lesson" data-lesson="4.1">
+      <div class="lesson-head"><span class="id">4.1</span><h3>Trust is a behavior, not a feeling</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Trust is not restored by declaration. It is rebuilt out of a long series of small moments in which words and behavior match — Gottman's "sliding door" moments, the unremarkable instants where one partner reaches and the other either turns toward them or doesn't. Nobody remembers the individual instances. The accumulation is what changes what the betrayed partner's body expects.</p>
+          <p>This is why grand gestures do so little. A vacation, a gift, a long letter — none of them generate evidence, because none of them are repeatable and none of them were in question. What generates evidence is being where you said you would be at the time you said, volunteering the awkward information before it is asked for, answering the same question the same way in month five as in month one, and coming home in an ordinary mood on an ordinary Tuesday.</p>
+          <p>The involved partner usually underestimates how long this takes. Twelve to twenty-four months of consistency is a realistic frame for couples doing this work well, and the betrayed partner's nervous system will keep running checks long after their reasoning has been satisfied.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Reassurance is a withdrawal from trust. Consistency is a deposit. Right now you are running a deficit, and only time in the black closes it.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Sliding-Door Log</h4><span class="kind">Tool 4.1</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">For two weeks, both partners write down the small moments — the ones nobody would call significant. This is the raw material trust is actually made of.</p>
+          <div class="table-scroll">
+          <table class="grid">
+            <thead><tr><th>Day</th><th>The moment — what was asked for, often without words</th><th>Turned toward / away</th></tr></thead>
+            <tbody id="sdrows"></tbody>
+          </table>
+          </div>
+          <div class="fieldset" style="margin-top:1.2rem;">
+            <div><label class="f">The behavior my partner could do every week that would count as evidence to me</label><textarea data-save="sd-evidence" rows="2"></textarea></div>
+            <div><label class="f">The gesture I keep making that isn't landing <span class="hint">— and what to do instead</span></label><textarea data-save="sd-gesture" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="4.1"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="4.2">
+      <div class="lesson-head"><span class="id">4.2</span><h3>Transparency with an exit</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>In the early months, open access to phones, accounts, and calendars usually helps. It lowers the search behavior that keeps the betrayed partner in a state of alarm, and it gives the involved partner a structure in which honesty is easy to demonstrate rather than merely asserted.</p>
+          <p>The risk is that a temporary measure quietly becomes the architecture. Two years on, some couples are still running a monitoring relationship in which one adult is the auditor and the other is the audited — a role structure that reliably kills desire and eventually breeds a new kind of secrecy, since being watched teaches a person to become better at not being seen.</p>
+          <p>The way out is to define, now, what the end of it looks like: what has to be true, for how long, before the arrangement is stepped down. Write it as conditions and a date rather than a feeling, because "when I feel safe" has no threshold and cannot be met.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>The goal is not a partner who can be monitored. It is a partner who volunteers the thing you would never have found.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Transparency Agreement</h4><span class="kind">Tool 4.2</span></div>
+          <div class="fieldset">
+            <div><label class="f">What is open right now <span class="hint">— devices, accounts, locations, schedules, finances</span></label><textarea data-save="t-open" rows="3"></textarea></div>
+            <div><label class="f">What counts as volunteered information <span class="hint">— the awkward thing said before being asked: an unexpected encounter, a message received, a trip that changed</span></label><textarea data-save="t-volunteer" rows="3"></textarea></div>
+            <div><label class="f">What has to be consistently true before we step this down</label><textarea data-save="t-conditions" rows="3"></textarea></div>
+            <div class="fieldrow">
+              <div><label class="f">First review date</label><input type="date" data-save="t-review"></div>
+              <div><label class="f">Checking behavior I'm working on reducing</label><input type="text" data-save="t-checking"></div>
+            </div>
+          </div>
+          <div class="caution">
+            <h4>If checking has become compulsive</h4>
+            <p>Hours lost to searching, repeated re-reading of what you already found, or checking that gives ten minutes of relief and then more dread — that is a pattern that tends to intensify rather than resolve with more access. It is worth individual support in its own right, separate from whatever your partner is or isn't doing.</p>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="4.2"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="4.3">
+      <div class="lesson-head"><span class="id">4.3</span><h3>The line that isn't straight</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Recovery does not improve steadily. Months three and four are frequently worse than month two — the shock wears off, ordinary life resumes, and grief arrives on a schedule of its own. Anniversaries, songs, a place, a phone buzzing at the wrong moment, a scene in a film: the injury reactivates without permission.</p>
+          <p>What both partners need at that point is a shared explanation of what is happening, so that a bad Thursday does not get read as a referendum. The betrayed partner's task in the moment is to distinguish present evidence from expectation — <em>my body is telling me it is happening again; what do I actually know right now?</em> — without pretending the reaction is irrational. The involved partner's task is to answer the trigger without visible weariness, for far longer than feels fair, because visible weariness teaches the betrayed partner to stop bringing it up rather than to stop feeling it.</p>
+          <p>Setbacks are not evidence of failure. A setback that shortens — three days becoming a day, becoming an hour — is exactly what recovery looks like from inside.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>"Still?" is the most expensive word in year one. The honest answer is yes, still, and asking it makes the next one arrive alone.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="split">
+          <div><h4>When a trigger hits — the betrayed partner</h4><p>Name it out loud rather than acting from it: "I'm triggered, it's the hotel scene, it isn't an accusation." Then ask for the specific thing that helps — a fact, contact, presence, twenty minutes alone.</p></div>
+          <div><h4>When a trigger hits — the involved partner</h4><p>Don't defend, don't sigh, don't point out how far you've come. Answer the question again. Stay in the room. "I'm here, it's over, ask me anything you need" costs you five minutes and buys a month.</p></div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>Trigger Response Plan</h4><span class="kind">Tool 4.3</span></div>
+          <div class="fieldset">
+            <div><label class="f">My most reliable triggers <span class="hint">— dates, places, times of day, the phone, work travel, sex, certain names</span></label><textarea data-save="tr-list" rows="3"></textarea></div>
+            <div><label class="f">What I'll say when one lands <span class="hint">— the sentence that flags it without launching an argument</span></label><textarea data-save="tr-say" rows="2"></textarea></div>
+            <div><label class="f">What I want from you in that moment, exactly</label><textarea data-save="tr-want" rows="2"></textarea></div>
+            <div><label class="f">Coming up on the calendar that we should plan for <span class="hint">— anniversary of discovery, a wedding, a trip, a holiday</span></label><textarea data-save="tr-calendar" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="4.3"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="4.4">
+      <div class="lesson-head"><span class="id">4.4</span><h3>Intimacy at a pace you can both consent to</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Sex after discovery goes in unpredictable directions. Some couples experience an intense, urgent reconnection in the first weeks; some find that touch has become unbearable; many alternate between the two within the same week. All of these are common, and none of them is a reliable indicator of where the relationship is heading.</p>
+          <p>Two failure modes are worth naming. Using sex as proof — that it's fine, that you're wanted, that the other person is still chosen — loads an act that cannot carry that weight and usually leaves both partners lonelier. And treating physical reconnection as the finish line skips the emotional safety it depends on: for most betrayed partners, being able to be exposed again requires having been listened to first, and repeatedly.</p>
+          <p>Consent here is ongoing and specific, and it belongs to both partners. Either of you may want to stop at any point, and stopping should be entirely unremarkable — no interrogation about what it means, no scorekeeping the next day.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Closeness that has to be performed as evidence isn't closeness. It's an audit with the lights off.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Intimacy Pacing Conversation</h4><span class="kind">Tool 4.4</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.6rem;">A scheduled twenty-minute talk, not one held in bed. Both partners answer.</p>
+          <div class="fieldset">
+            <div><label class="f">Where I am with physical closeness right now, honestly</label><textarea data-save="i-where" rows="2"></textarea></div>
+            <div><label class="f">What feels safe now <span class="hint">— sitting close, hands, sleeping in the same bed, nothing yet</span></label><textarea data-save="i-safe" rows="2"></textarea></div>
+            <div><label class="f">What isn't available yet, and what would need to be true first</label><textarea data-save="i-not" rows="2"></textarea></div>
+            <div><label class="f">How either of us says stop, and what happens after <span class="hint">— which is nothing</span></label><textarea data-save="i-stop" rows="2"></textarea></div>
+            <div><label class="f">Intrusive images during intimacy — do they happen, and what helps</label><textarea data-save="i-images" rows="2"></textarea></div>
+            <div><label class="f">When we'll revisit this</label><input type="date" data-save="i-revisit"></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="4.4"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="4.5">
+      <div class="lesson-head"><span class="id">4.5</span><h3>Measuring repair</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>"Do we feel better?" is a poor instrument. Feelings after betrayal move with sleep, hormones, anniversaries, and whatever happened at work — you can have a good week inside a dying marriage and a wretched week inside one that is genuinely healing.</p>
+          <p>Better questions are behavioral and observable. Is honesty increasing, including about small things where lying would be easier? Is follow-through matching what was promised? Are hard conversations recovering faster? Is the need to verify slowly decreasing — not because checking was forbidden, but because it keeps returning nothing?</p>
+          <p>Rate these monthly, separately, then compare. The gap between two partners' ratings is usually more informative than either number, and a widening gap over several months is worth taking to a therapist rather than arguing about.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Ask not "are we happier?" but "are we becoming more honest, more responsible, and better at conflict than we were?"</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Trust-Building Scorecard</h4><span class="kind">Tool 4.5</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.9rem;">Rate the last month, 0 to 10. Both partners, separately, on the same day.</p>
+          <div class="scale" id="trustscale">
+            <div class="scale-row"><label for="ts1">Honesty about small things</label><input type="range" id="ts1" min="0" max="10" value="5" data-save="ts1"><output for="ts1">5</output></div>
+            <div class="scale-row"><label for="ts2">Follow-through on what was promised</label><input type="range" id="ts2" min="0" max="10" value="5" data-save="ts2"><output for="ts2">5</output></div>
+            <div class="scale-row"><label for="ts3">Information volunteered before being asked</label><input type="range" id="ts3" min="0" max="10" value="5" data-save="ts3"><output for="ts3">5</output></div>
+            <div class="scale-row"><label for="ts4">Empathy when the injury comes up again</label><input type="range" id="ts4" min="0" max="10" value="5" data-save="ts4"><output for="ts4">5</output></div>
+            <div class="scale-row"><label for="ts5">Boundaries kept without reminders</label><input type="range" id="ts5" min="0" max="10" value="5" data-save="ts5"><output for="ts5">5</output></div>
+            <div class="scale-row"><label for="ts6">Speed of recovery after conflict</label><input type="range" id="ts6" min="0" max="10" value="5" data-save="ts6"><output for="ts6">5</output></div>
+            <div class="scale-row"><label for="ts7">Affection that isn't proving anything</label><input type="range" id="ts7" min="0" max="10" value="5" data-save="ts7"><output for="ts7">5</output></div>
+            <div class="scale-row"><label for="ts8">Decreasing need to verify</label><input type="range" id="ts8" min="0" max="10" value="5" data-save="ts8"><output for="ts8">5</output></div>
+          </div>
+          <div class="scale-legend"><span>0 — not happening</span><span>10 — consistently true</span></div>
+          <div class="fieldset" style="margin-top:1.3rem;">
+            <div><label class="f">The lowest score, and the specific behavior that would raise it by two</label><textarea data-save="ts-low" rows="2"></textarea></div>
+            <div class="fieldrow">
+              <div><label class="f">Rated on</label><input type="date" data-save="ts-date"></div>
+              <div><label class="f">Next rating</label><input type="date" data-save="ts-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="4.5"> Mark lesson complete</label>
+    </article>
+
+    <div class="pull">Promises are what got broken. <span>Patterns are what replace them</span> — and patterns take longer than anyone wants them to.</div>
+  </div>
+</section>
+
+<section id="m5">
+  <div class="wrap plate">
+    <div class="num">Module Five</div>
+    <h2>Choosing Your Future</h2>
+    <p class="obj">Objective: decide on purpose, rather than from panic, guilt, or pressure.</p>
+    <div class="contents">
+      <div><span>5.1</span>Is there something here to repair</div>
+      <div><span>5.2</span>Four things that get confused</div>
+      <div><span>5.3</span>Three legitimate paths</div>
+      <div><span>5.4</span>The next ninety days</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <article class="lesson" data-lesson="5.1">
+      <div class="lesson-head"><span class="id">5.1</span><h3>Is there something here to repair</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Repair requires specific conditions, and their absence is information rather than an insult. The affair is genuinely over. Responsibility has been taken without a co-signer. The involved partner can tolerate the betrayed partner's pain without collapsing or turning it back on them. Behavior has actually changed, not just been promised. And both people are willing — not certain, willing — to try.</p>
+          <p>Willingness is the honest word. Almost nobody is certain at this stage, and waiting for certainty before working is how couples spend a year in limbo. What is required is enough willingness to run an experiment with a defined length and defined terms.</p>
+          <p>Score this separately. If one of you is at 2 and the other is at 8, that gap is the actual subject of the next conversation — and structured discernment work, which explicitly holds the door open in both directions, is usually a better fit than couples therapy aimed at reconciliation.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>You do not need to know whether you want to stay married. You need to know whether you are willing to find out on purpose.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Repair Readiness Assessment</h4><span class="kind">Tool 5.1</span></div>
+          <p style="font-size:.92rem;color:var(--muted);margin-bottom:.9rem;">0 to 10, honestly, from where you actually stand today. Both partners, separately.</p>
+          <div class="scale" id="readyscale">
+            <div class="scale-row"><label for="rr1">The affair is fully over, with no residual contact</label><input type="range" id="rr1" min="0" max="10" value="5" data-save="rr1"><output for="rr1">5</output></div>
+            <div class="scale-row"><label for="rr2">Responsibility has been taken without conditions</label><input type="range" id="rr2" min="0" max="10" value="5" data-save="rr2"><output for="rr2">5</output></div>
+            <div class="scale-row"><label for="rr3">Difficult emotions can be tolerated by both of us</label><input type="range" id="rr3" min="0" max="10" value="5" data-save="rr3"><output for="rr3">5</output></div>
+            <div class="scale-row"><label for="rr4">Behavior — not just intention — has changed</label><input type="range" id="rr4" min="0" max="10" value="5" data-save="rr4"><output for="rr4">5</output></div>
+            <div class="scale-row"><label for="rr5">Honesty is holding, including about small things</label><input type="range" id="rr5" min="0" max="10" value="5" data-save="rr5"><output for="rr5">5</output></div>
+            <div class="scale-row"><label for="rr6">There is affection or goodwill left to work with</label><input type="range" id="rr6" min="0" max="10" value="5" data-save="rr6"><output for="rr6">5</output></div>
+            <div class="scale-row"><label for="rr7">I am willing to keep working for another ninety days</label><input type="range" id="rr7" min="0" max="10" value="5" data-save="rr7"><output for="rr7">5</output></div>
+          </div>
+          <div class="scale-legend"><span>0 — not true</span><span>10 — clearly true</span></div>
+          <div class="btn-row"><button class="btn" id="readycalc">Show my total</button><span class="saved-flag" id="readyout"></span></div>
+          <div class="fieldset" style="margin-top:1.2rem;">
+            <div><label class="f">The item I scored lowest, and what would have to happen for it to move</label><textarea data-save="rr-low" rows="2"></textarea></div>
+          </div>
+          <div class="note">
+            <h4>Reading the number</h4>
+            <p>This is a conversation starter, not a diagnostic instrument. Scores clustering high on both sides usually mean the work continues. A wide gap between partners usually means discernment rather than repair. Low scores across both — especially on items one, two, and four — usually mean the conditions for repair are not present <em>yet</em>, which is different from never.</p>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="5.1"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="5.2">
+      <div class="lesson-head"><span class="id">5.2</span><h3>Four things that get confused</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>Forgiveness, trust, reconciliation, and staying married are four separate processes, and treating them as one package is the source of an enormous amount of pressure in these months.</p>
+          <p>Forgiveness is an internal release of the demand that the past be different. It can happen in a marriage that ends, and it can fail to happen in a marriage that continues. It cannot be given on schedule, and a partner who asks for it as proof of progress has misunderstood what it is.</p>
+          <p>Trust is an assessment of reliability built from evidence. Reconciliation is the joint rebuilding of a relationship. Staying is a decision, sometimes made for reasons — children, faith, finances, a shared life worth more than this — that do not require the other three to be complete. The clarity to have here is which of the four you are each actually being asked for right now.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Nobody is owed forgiveness on a timetable. And no one has to have forgiven in order to keep working.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Sorting the Four</h4><span class="kind">Tool 5.2</span></div>
+          <div class="fieldset">
+            <div><label class="f">Forgiveness — where am I, honestly, and what does the word even mean to me</label><textarea data-save="f-forgive" rows="2"></textarea></div>
+            <div><label class="f">Trust — what does the evidence support today <span class="hint">— not what I hope, what it supports</span></label><textarea data-save="f-trust" rows="2"></textarea></div>
+            <div><label class="f">Reconciliation — am I actually rebuilding, or waiting to see</label><textarea data-save="f-recon" rows="2"></textarea></div>
+            <div><label class="f">Staying — my honest reasons, including the practical ones</label><textarea data-save="f-stay" rows="2"></textarea></div>
+            <div><label class="f">What I am being pressed for that I am not ready to give</label><textarea data-save="f-pressed" rows="2"></textarea></div>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="5.2"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="5.3">
+      <div class="lesson-head"><span class="id">5.3</span><h3>Three legitimate paths</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>There are three honest outcomes, and this course does not favor one. What it favors is that whichever you take, you take it deliberately, with terms you both understand, rather than drifting until circumstances decide.</p>
+          <p>Values are the most useful compass at this juncture, and they are more stable than feelings. Not "do I feel in love this week" but: what kind of person do I want to have been in this? What do I want my children to have watched me do? What could I live with, and what would I be unable to look at in ten years?</p>
+          <p>Note that a decision to end can be made well or badly, and that ending well is a genuine skill — particularly where there are children, who will need both parents functional far longer than the marriage lasted.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Drift is also a decision. It is just one you make by not making it, in installments, over about two years.</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="grid-2">
+          <div class="mini"><h4>Active rebuilding</h4><p>Both partners in. Defined work, defined support, a review date. Requires most of the readiness conditions to be present.</p></div>
+          <div class="mini"><h4>Structured discernment</h4><p>A set period — often six weeks to three months — with agreed terms about living arrangements, contact, and decisions, held open in both directions rather than as a soft exit.</p></div>
+        </div>
+        <div class="card tool">
+          <div class="tool-head"><h4>Values-Based Decision Guide</h4><span class="kind">Tool 5.3</span></div>
+          <div class="fieldset">
+            <div><label class="f">What kind of partner and person do I want to have been through this, regardless of the outcome</label><textarea data-save="p-values" rows="3"></textarea></div>
+            <div><label class="f">If I stay, what am I saying yes to — and what am I agreeing to keep living with</label><textarea data-save="p-stay" rows="3"></textarea></div>
+            <div><label class="f">If we separate, what does doing it well look like <span class="hint">— children, money, how we speak about each other, what gets said publicly</span></label><textarea data-save="p-leave" rows="3"></textarea></div>
+            <div><label class="f">What I would tell a close friend in exactly my situation</label><textarea data-save="p-friend" rows="2"></textarea></div>
+            <div><label class="f">The path I'm choosing for the next ninety days <span class="hint">— rebuilding, discernment, or ending; and it can be revisited</span></label><textarea data-save="p-path" rows="2"></textarea></div>
+          </div>
+        </div>
+        <div class="caution">
+          <h4>A note about pressure</h4>
+          <p>Family, friends, and communities often have strong opinions and deliver them with confidence. They will not live inside the result. If you are being pressed toward either outcome — by anyone, including on religious grounds — it is worth saying out loud, here, whose voice you are hearing when you imagine each path.</p>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="5.3"> Mark lesson complete</label>
+    </article>
+
+    <article class="lesson" data-lesson="5.4">
+      <div class="lesson-head"><span class="id">5.4</span><h3>The next ninety days</h3></div>
+      <div class="beat"><span class="tag">Understand</span>
+        <div class="prose">
+          <p>A decision that stays a feeling evaporates within about a week. Translate it into commitments specific enough that a neutral observer could tell, ninety days from now, whether they happened.</p>
+          <p>Include individual work, not only couple work. Whatever you decide about the marriage, each of you took patterns into it that will follow you out of it. Include the ordinary infrastructure too — how often you talk, who has the children when, what happens with money — because these are what the next three months will actually consist of.</p>
+          <p>Then set the reassessment date and put it on a calendar. On that day you are not asking whether it feels resolved. You are asking whether the commitments happened, whether the scorecard moved, and what the evidence now supports.</p>
+        </div>
+      </div>
+      <div class="beat reframe"><span class="tag">Reframe</span>
+        <p>Ninety days from now, the question is not "do we feel better." It is "what actually happened, and what does it show."</p>
+      </div>
+      <div class="beat"><span class="tag">Act</span>
+        <div class="card tool">
+          <div class="tool-head"><h4>Ninety-Day Plan</h4><span class="kind">Tool 5.4</span></div>
+          <div class="fieldset">
+            <div><label class="f">Professional support <span class="hint">— couples work, individual work, who, how often, starting when</span></label><textarea data-save="n-support" rows="2"></textarea></div>
+            <div><label class="f">Our communication rhythm <span class="hint">— weekly check-in, scheduled talks, what happens between them</span></label><textarea data-save="n-comm" rows="2"></textarea></div>
+            <div><label class="f">Boundaries and transparency for this period, including the step-down conditions</label><textarea data-save="n-bound" rows="2"></textarea></div>
+            <div><label class="f">Parenting and household commitments</label><textarea data-save="n-parent" rows="2"></textarea></div>
+            <div><label class="f">Intimacy pacing, as currently agreed</label><textarea data-save="n-intimacy" rows="2"></textarea></div>
+            <div><label class="f">My individual work — the pattern I'm taking on, and how</label><textarea data-save="n-individual" rows="2"></textarea></div>
+            <div><label class="f">What either of us would name as a dealbreaker in this period</label><textarea data-save="n-deal" rows="2"></textarea></div>
+            <div class="fieldrow">
+              <div><label class="f">We reassess on</label><input type="date" data-save="n-date"></div>
+              <div><label class="f">Signed</label><input type="text" data-save="n-signed" placeholder="Both names"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h4 class="min">Define progress before you measure it</h4>
+          <div class="prose" style="font-size:.95rem;">
+            <p>At the reassessment, ask these four rather than "are we okay?" Are we more honest than we were three months ago? Is responsibility still being held without argument? Are we emotionally accessible to each other more often than not? Do conflicts end better than they used to? Answer them with examples, not impressions.</p>
+          </div>
+        </div>
+      </div>
+      <label class="done"><input type="checkbox" data-done="5.4"> Mark lesson complete</label>
+    </article>
+
+    <div class="pull">Whatever you decide, decide it <span>with your eyes open</span> — and be able to say, later, exactly why.</div>
+  </div>
+</section>
+<section id="frameworks">
+  <div class="wrap block" style="padding-top:5rem;">
+    <div class="eyebrow">Appendix A</div>
+    <h2 class="head" style="margin-top:.8rem;">Where this comes from</h2>
+    <div class="prose">
+      <p class="lede">This course is an integration, not an invention. Each module borrows from a body of clinical work that has been tested on couples in exactly this position. If something in here helps, the sources below are where to read further.</p>
+    </div>
+
+    <div class="card">
+      <h4 class="min">Gottman Method</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the physiology and the observable markers: diffuse physiological arousal and the twenty-minute break, softened start-up, repair attempts, negative sentiment override, sliding-door moments, and the insistence that trust is measured in behavior rather than declared. Modules 1, 3, and 4 lean on it most.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Relational Life Therapy — Terry Real</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the stance on accountability: harm is held whole by the person who did it, context never functions as a co-signer, and grandiosity and shame are treated as two faces of the same collapse. Module 2 is built on this.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Emotionally Focused Therapy — Sue Johnson</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the cycle — pursue and withdraw as a loop rather than a fault — and the listener's work of reaching past content for the attachment fear underneath. It also frames betrayal as an injury to the bond itself, which is why reassurance fails and re-engagement works. Modules 2, 3, and 4.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Bowen Family Systems</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies differentiation, triangles, and the family-of-origin lens: what each partner learned about honesty, conflict, and unhappiness long before they met. Module 2.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Satir's Experiential Model</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the survival stances — placating, blaming, super-reasonable, irrelevant — and the alternative of leveling: saying the true thing without attack or collapse. Modules 2 and 3.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Milan Systemic Practice</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies circularity: in a repeating loop there is no first move to locate, and asking who started it produces argument rather than information. Used carefully in Module 2, where it must never be allowed to dilute individual responsibility for deception.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Narrative Therapy — White &amp; Epston</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the shared account: externalizing the problem, thickening a story reduced to its worst chapter, and building a version of events both partners can carry. Module 2.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Bronfenbrenner's Ecological Model</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the layers around the couple — children, extended family, workplace, congregation, community — and the reminder that disclosure decisions reshape systems that outlast the crisis. Modules 1 and 5.</p></div>
+    </div>
+    <div class="card">
+      <h4 class="min">Discernment counseling</h4>
+      <div class="prose" style="font-size:.95rem;"><p>Supplies the third path in Module 5: a short, structured process for mixed-agenda couples that deliberately holds both outcomes open rather than presuming reconciliation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="clinicians">
+  <div class="wrap block">
+    <div class="eyebrow">Appendix B</div>
+    <h2 class="head" style="margin-top:.8rem;">For the clinician</h2>
+    <div class="prose">
+      <p class="lede">A short companion for therapists assigning this course between sessions, or using it as the spine of a structured couples protocol.</p>
+    </div>
+
+    <h3 class="sub">Sequencing</h3>
+    <div class="prose">
+      <p>The modules are ordered for a reason and do not survive being reshuffled. Understanding (Module 2) before stabilization (Module 1) invites the relational-context conversation while the betrayed partner is still flooded, and it reliably lands as blame. Trust-building (Module 4) before an ownership statement exists produces behavioral compliance without meaning. Decision work (Module 5) attempted in the first weeks is panic wearing the clothing of resolve.</p>
+      <p>A workable pace is two to four weeks per module, with Module 1 open-ended. Assign one lesson between sessions and use the tool as the session's material rather than reviewing it as homework.</p>
+    </div>
+
+    <h3 class="sub">Contraindications and cautions</h3>
+    <div class="prose">
+      <p>Conjoint work of this kind is contraindicated where there is intimate partner violence or coercive control, where safety planning is the priority, or where an untreated addiction or acute psychiatric presentation makes the containment this course assumes unachievable. Ongoing, undisclosed contact with the affair partner is also a contraindication for Modules 2 through 5 — the material presumes containment has been established, and proceeding without it teaches the betrayed partner that the process itself cannot be trusted.</p>
+      <p>Hold a clear position on secrets before beginning, and state it to both partners. Working with a couple while holding one partner's undisclosed ongoing affair places the therapist inside the deception.</p>
+    </div>
+
+    <h3 class="sub">What to watch for</h3>
+    <ul class="plain">
+      <li>Premature forgiveness pressure — often from family, a faith community, or the involved partner's shame — presented as spiritual or emotional maturity.</li>
+      <li>The shame-collapse pattern in 2.4: every account of the injury reorganizing around consoling the person who caused it.</li>
+      <li>Detail-seeking that escalates rather than settles, and checking behavior that has become compulsive (4.2). Both usually need individual work alongside the couple work.</li>
+      <li>A widening gap between partners' scorecard ratings across months (4.5) — more informative than either partner's number.</li>
+      <li>Mixed agendas presented as reconciliation. Where readiness scores diverge sharply, discernment is the more honest frame.</li>
+      <li>Trauma symptoms in the betrayed partner — intrusive imagery, hypervigilance, sleep disruption persisting past the acute period — warranting individual referral and, where indicated, trauma-focused treatment.</li>
+    </ul>
+
+    <h3 class="sub">On formal disclosure</h3>
+    <div class="prose">
+      <p>Module 2 builds a shared narrative, not a full therapeutic disclosure. Where a structured disclosure with a written account and a prepared impact statement is indicated — commonly where there is a long history of concealment or compulsive sexual behavior — it should be prepared and facilitated by a trained clinician, with each partner supported individually, rather than attempted from a worksheet at the kitchen table.</p>
+    </div>
+
+    <h3 class="sub">Using the tools</h3>
+    <div class="prose">
+      <p>Every writing space here is designed to be completed separately by each partner and compared in session; the divergence is the clinical material. The page saves entries in the couple's own browser and transmits nothing. Printing produces a clean workbook if you would rather hand them paper — the print layout drops the navigation, timers, and buttons.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Professional note.</strong> This material is psychoeducational. It is not intended to diagnose or treat a mental health disorder, to determine whether a couple should remain together, or to replace individualized assessment and care. Couples experiencing severe distress, trauma symptoms, intimate partner violence, coercive control, active addiction, or significant mental health concerns should seek appropriate professional support.</p>
+    <p>If there is immediate danger, contact emergency services. In the U.S.: 988 Suicide &amp; Crisis Lifeline (call or text 988); National Domestic Violence Hotline 1-800-799-7233, or text START to 88788.</p>
+    <p>Your responses are stored only in this browser, on this device. Clearing your browser data removes them. Use the print option to keep a copy.</p>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // ---- storage that degrades gracefully ----
+  var mem = {};
+  var KEY = "ata-course-v1";
+  function loadAll(){
+    try{ var raw = window.localStorage.getItem(KEY); if(raw) mem = JSON.parse(raw) || {}; }
+    catch(e){ mem = {}; }
+    return mem;
+  }
+  var saveTimer = null;
+  function persist(){
+    if(saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(function(){
+      try{ window.localStorage.setItem(KEY, JSON.stringify(mem)); }catch(e){}
+    }, 250);
+  }
+  loadAll();
+
+  // ---- build repeating table rows ----
+  function rows(tbodyId, count, cells, firstCol){
+    var tb = document.getElementById(tbodyId);
+    if(!tb) return;
+    var html = "";
+    for(var i=1;i<=count;i++){
+      html += "<tr>";
+      html += "<td style='white-space:nowrap;color:var(--muted);font-family:DM Mono,monospace;font-size:.72rem;'>"+(firstCol ? firstCol(i) : i)+"</td>";
+      for(var c=0;c<cells;c++){
+        html += "<td><input type='text' data-save='"+tbodyId+"-"+i+"-"+c+"'></td>";
+      }
+      html += "</tr>";
+    }
+    tb.innerHTML = html;
+  }
+  rows("stabrows", 14, 6, function(i){ return "Day "+i; });
+  rows("discrows", 6, 3, function(i){ return i; });
+  rows("tlrows", 8, 2, function(i){ return i; });
+  rows("sdrows", 10, 2, function(i){ return i; });
+
+  // ---- restore + bind every saved field ----
+  function bindFields(){
+    var nodes = document.querySelectorAll("[data-save]");
+    Array.prototype.forEach.call(nodes, function(el){
+      var key = el.getAttribute("data-save");
+      if(el.classList && el.classList.contains("checks")){
+        var boxes = el.querySelectorAll("input[type=checkbox]");
+        Array.prototype.forEach.call(boxes, function(box, idx){
+          var k = key+"-"+idx;
+          if(mem[k]) box.checked = true;
+          box.addEventListener("change", function(){ mem[k] = box.checked ? 1 : 0; persist(); });
+        });
+        return;
+      }
+      if(el.tagName === "TEXTAREA" || el.tagName === "INPUT"){
+        if(el.type === "range"){
+          if(typeof mem[key] !== "undefined") el.value = mem[key];
+          var out = document.querySelector("output[for='"+el.id+"']");
+          if(out) out.textContent = el.value;
+          el.addEventListener("input", function(){
+            mem[key] = el.value; persist();
+            if(out) out.textContent = el.value;
+          });
+          return;
+        }
+        if(typeof mem[key] !== "undefined") el.value = mem[key];
+        el.addEventListener("input", function(){ mem[key] = el.value; persist(); });
+      }
+    });
+  }
+  bindFields();
+
+  // ---- lesson completion + progress ----
+  var doneBoxes = document.querySelectorAll("[data-done]");
+  var total = doneBoxes.length;
+  function updateProgress(){
+    var n = 0;
+    Array.prototype.forEach.call(doneBoxes, function(b){ if(b.checked) n++; });
+    var bar = document.getElementById("progbar");
+    var txt = document.getElementById("progtext");
+    if(bar) bar.style.width = (total ? (n/total*100) : 0) + "%";
+    if(txt) txt.textContent = n + " of " + total + " lessons";
+  }
+  Array.prototype.forEach.call(doneBoxes, function(box){
+    var k = "done-" + box.getAttribute("data-done");
+    if(mem[k]) box.checked = true;
+    box.addEventListener("change", function(){
+      mem[k] = box.checked ? 1 : 0; persist(); updateProgress();
+    });
+  });
+  updateProgress();
+
+  // ---- rail: current section ----
+  var links = document.querySelectorAll("#railnav a");
+  var targets = [];
+  Array.prototype.forEach.call(links, function(a){
+    var el = document.querySelector(a.getAttribute("href"));
+    if(el) targets.push({link:a, el:el});
+  });
+  function markCurrent(){
+    var y = window.scrollY + window.innerHeight*0.28;
+    var current = null;
+    targets.forEach(function(t){ if(t.el.offsetTop <= y) current = t; });
+    targets.forEach(function(t){ t.link.classList.toggle("current", t === current); });
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function(){
+    if(ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){ markCurrent(); ticking = false; });
+  }, {passive:true});
+  markCurrent();
+
+  // ---- conversation timer ----
+  var LEN = 20*60, left = LEN, running = false, tick = null;
+  var clock = document.getElementById("clock");
+  var startBtn = document.getElementById("tstart");
+  var resetBtn = document.getElementById("treset");
+  var tnote = document.getElementById("tnote");
+  function render(){
+    if(!clock) return;
+    var m = Math.floor(left/60), s = left%60;
+    clock.textContent = m + ":" + (s<10 ? "0"+s : s);
+    if(tnote && running) tnote.textContent = left > LEN/2 ? "First partner speaking" : (left > 4*60 ? "Second partner speaking" : "Land it — one agreement");
+  }
+  if(startBtn){
+    startBtn.addEventListener("click", function(){
+      if(running){
+        running = false; clearInterval(tick); startBtn.textContent = "Resume";
+        return;
+      }
+      running = true; startBtn.textContent = "Pause";
+      tick = setInterval(function(){
+        left--;
+        if(left <= 0){
+          left = 0; running = false; clearInterval(tick);
+          startBtn.textContent = "Start";
+          if(clock) clock.classList.add("ringing");
+          if(tnote) tnote.textContent = "Time — stop here, set the next one";
+        }
+        render();
+      }, 1000);
+      render();
+    });
+  }
+  if(resetBtn){
+    resetBtn.addEventListener("click", function(){
+      running = false; clearInterval(tick); left = LEN;
+      if(startBtn) startBtn.textContent = "Start";
+      if(clock) clock.classList.remove("ringing");
+      if(tnote) tnote.textContent = "Half for each of you";
+      render();
+    });
+  }
+  render();
+
+  // ---- readiness total ----
+  var readyBtn = document.getElementById("readycalc");
+  if(readyBtn){
+    readyBtn.addEventListener("click", function(){
+      var ranges = document.querySelectorAll("#readyscale input[type=range]");
+      var sum = 0;
+      Array.prototype.forEach.call(ranges, function(r){ sum += parseInt(r.value,10); });
+      var out = document.getElementById("readyout");
+      var max = ranges.length*10;
+      var read = sum >= max*0.7 ? "conditions for repair largely present"
+              : sum >= max*0.4 ? "mixed — read the low items, and consider discernment"
+              : "the conditions are not present yet";
+      if(out) out.textContent = sum + " of " + max + " — " + read;
+    });
+  }
+
+  // ---- copy responses ----
+  var copyBtn = document.getElementById("copyall");
+  if(copyBtn){
+    copyBtn.addEventListener("click", function(){
+      var out = ["AFTER THE AFFAIR — my responses", ""];
+      var sections = document.querySelectorAll("section");
+      Array.prototype.forEach.call(sections, function(sec){
+        var heading = sec.querySelector("h2");
+        var chunk = [];
+        var fields = sec.querySelectorAll("textarea[data-save], input[type=text][data-save], input[type=date][data-save]");
+        Array.prototype.forEach.call(fields, function(f){
+          if(!f.value) return;
+          var lab = f.closest("label") || (f.parentNode && f.parentNode.querySelector("label.f"));
+          var name = lab ? lab.textContent.trim() : f.getAttribute("data-save");
+          chunk.push("- " + name + "\n  " + f.value);
+        });
+        if(chunk.length){
+          out.push((heading ? heading.textContent.trim().toUpperCase() : "SECTION"));
+          out.push("");
+          out.push(chunk.join("\n"));
+          out.push("");
+        }
+      });
+      var text = out.join("\n");
+      var done = function(ok){ copyBtn.textContent = ok ? "Copied to clipboard" : "Select and copy from the box"; setTimeout(function(){ copyBtn.textContent = "Copy my responses"; }, 2600); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ fallback(text, done); });
+      } else { fallback(text, done); }
+      function fallback(t, cb){
+        var ta = document.createElement("textarea");
+        ta.value = t; ta.style.position="fixed"; ta.style.opacity="0";
+        document.body.appendChild(ta); ta.select();
+        var ok = false;
+        try{ ok = document.execCommand("copy"); }catch(e){}
+        document.body.removeChild(ta); cb(ok);
+      }
+    });
+  }
+
+  // ---- gentle reveal ----
+  var plates = document.querySelectorAll(".plate, .pull");
+  if("IntersectionObserver" in window){
+    Array.prototype.forEach.call(plates, function(p){ p.classList.add("reveal"); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {rootMargin:"0px 0px -12% 0px"});
+    Array.prototype.forEach.call(plates, function(p){ io.observe(p); });
+  }
+})();
+</script>
+
+</body>
+</html>
