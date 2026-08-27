@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A private reflection from MindFull Counseling that breaks executive function into its component parts — where you struggle, where you're steady, and what actually helps.">
+  <link rel="canonical" href="https://www.mindfullcounseling.org/executive-function/">
+  <meta property="og:url" content="https://www.mindfullcounseling.org/executive-function/">
+  <meta property="og:title" content="MindFull Executive Function Reflection">
+  <meta property="og:description" content="Nine executive functions, taken apart one at a time — with practical strategies for the ones that are hardest.">
+  <title>Executive Function Reflection | MindFull Counseling</title>
+  <style>
+    :root{--ink:#17231d;--cream:#f4f1e9;--paper:#fbfaf6;--sage:#a9b9aa;--moss:#385447;--rust:#b7684d;--line:rgba(23,35,29,.16);--line-soft:rgba(23,35,29,.09);--muted:#637068}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    button{font:inherit}
+    .hidden{display:none!important}
+    h1,h2,h3{font-family:Georgia,serif;font-weight:400;margin:0}
+    p{margin:0}
+    a{color:var(--moss)}
+    :focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+
+    nav,.topbar{height:78px;padding:0 clamp(22px,5vw,70px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}
+    .brand{font:700 24px Georgia,serif;letter-spacing:-1px;background:none;border:0;padding:0;color:var(--ink);cursor:pointer}
+    .counter{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+    .counter:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:9px;background:#74937b}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 18px}
+
+    .primary{min-width:240px;padding:17px 21px;border:1px solid var(--ink);border-radius:999px;background:var(--ink);color:#fff;display:inline-flex;justify-content:space-between;gap:18px;cursor:pointer;transition:.2s}
+    .primary:hover{background:var(--moss);transform:translateY(-2px)}
+    .ghost{padding:14px 20px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;transition:.2s}
+    .ghost:hover{border-color:var(--ink)}
+    .micro{font-size:11px;color:#6c7770}
+
+    .hero{padding:clamp(60px,9vw,120px) clamp(24px,10vw,160px) clamp(50px,7vw,90px);display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:end}
+    .hero h1{font-size:clamp(42px,6.4vw,86px);line-height:1.02;letter-spacing:-1px}
+    .hero h1 em{font-style:italic;color:var(--moss)}
+    .hero .lede{margin-top:26px;font-size:17px;max-width:34em;color:#3b4842}
+    .hero-side{border-left:1px solid var(--line);padding-left:34px;font-size:14px;color:var(--muted)}
+    .hero-side b{display:block;font:22px Georgia,serif;color:var(--ink);margin-bottom:8px}
+
+    .premise{padding:clamp(60px,8vw,105px) clamp(24px,10vw,160px);background:var(--ink);color:#f8f4ea;display:grid;grid-template-columns:.3fr 1.4fr .7fr;gap:55px;align-items:start}
+    .premise .eyebrow{color:#9fb0a6;margin:0}
+    .premise blockquote{margin:0;font:clamp(30px,3.6vw,50px)/1.14 Georgia,serif}
+    .premise>p:last-child{color:#b9c1bc;font-size:15px}
+
+    .domains{padding:clamp(56px,7vw,96px) clamp(24px,10vw,160px)}
+    .domains h2{font:clamp(30px,3.6vw,46px)/1.12 Georgia,serif;margin-bottom:34px;max-width:16em}
+    .domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+    .domain-grid article{background:var(--paper);padding:22px 24px 26px}
+    .domain-grid span{font-size:11px;letter-spacing:.16em;color:var(--rust)}
+    .domain-grid h3{font-size:21px;margin:8px 0 6px}
+    .domain-grid p{font-size:14px;color:var(--muted)}
+
+    .notdx{padding:clamp(48px,6vw,80px) clamp(24px,10vw,160px);border-top:1px solid var(--line)}
+    .notdx-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .notdx h2{font:clamp(26px,3vw,38px)/1.15 Georgia,serif;max-width:14em}
+    .notdx p{font-size:15px;color:#3b4842}
+    .notdx p+p{margin-top:14px}
+
+    .cta{padding:clamp(64px,8vw,100px) 24px;text-align:center;background:var(--rust);color:#fff9ee}
+    .cta h2{margin:0 0 30px;font:clamp(34px,4.6vw,62px)/1.08 Georgia,serif}
+    .cta .primary{background:#fff9ee;color:var(--ink);border-color:#fff9ee;margin:auto}
+    .cta .primary:hover{background:#fff;color:var(--ink)}
+    .cta .micro{color:#ffe6d6;margin-top:20px}
+
+    footer{padding:30px clamp(22px,5vw,70px);display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);font-size:11px;color:#68736d}
+    footer b{font:20px Georgia,serif;color:var(--ink)}
+
+    /* ── quiz ── */
+    .progress{height:3px;background:var(--line-soft)}
+    .progress i{display:block;height:100%;width:0;background:var(--moss);transition:width .3s}
+    .qwrap{max-width:820px;margin:0 auto;padding:clamp(44px,7vw,86px) 24px clamp(60px,8vw,90px)}
+    .qdomain{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--rust);margin-bottom:20px}
+    .qtext{font:clamp(26px,3.6vw,42px)/1.18 Georgia,serif;margin-bottom:34px}
+    .scale{display:flex;flex-direction:column;gap:9px}
+    .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:var(--paper);cursor:pointer;transition:.15s}
+    .opt:hover{border-color:var(--ink);transform:translateX(3px)}
+    .opt.sel{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .opt i{width:9px;height:9px;border-radius:50%;border:1px solid currentColor;flex:none}
+    .opt.sel i{background:#fff}
+    .qnav{display:flex;justify-content:space-between;align-items:center;margin-top:30px;font-size:13px;color:var(--muted)}
+    .qnav button{background:none;border:0;color:var(--muted);cursor:pointer;padding:6px 0}
+    .qnav button:hover{color:var(--ink)}
+    .qnav button[disabled]{opacity:.35;cursor:default}
+
+    /* ── results ── */
+    .rwrap{max-width:900px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 90px}
+    .result-intro h1{font:clamp(32px,4.4vw,54px)/1.08 Georgia,serif;margin-bottom:18px}
+    .result-intro p{font-size:16px;color:#3b4842;max-width:44em}
+    .bars{margin-top:40px;border-top:1px solid var(--line)}
+    .bar-row{display:grid;grid-template-columns:190px 1fr 128px;gap:18px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+    .bar-row .name{font:19px Georgia,serif}
+    .track{height:8px;background:var(--line-soft);border-radius:999px;overflow:hidden}
+    .track i{display:block;height:100%;width:0;border-radius:999px;transition:width .8s cubic-bezier(.22,1,.36,1)}
+    .band{font-size:11px;text-transform:uppercase;letter-spacing:.12em;text-align:right;color:var(--muted)}
+    .lv0{background:#74937b}.lv1{background:#a9b9aa}.lv2{background:#d59a6a}.lv3{background:var(--rust)}
+
+    .gate{margin-top:44px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(26px,4vw,40px)}
+    .gate h2{font:clamp(24px,3vw,34px)/1.15 Georgia,serif;margin-bottom:12px}
+    .gate p{font-size:15px;color:#3b4842;max-width:40em}
+    .gate form{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}
+    .gate input[type=email]{flex:1 1 260px;padding:16px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;color:var(--ink)}
+    .gate input[type=email]:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 3px rgba(56,84,71,.12)}
+    .gate .primary{min-width:200px}
+    .gate .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:16px;cursor:pointer}
+    .gate .consent input{margin-top:4px;accent-color:var(--moss);width:16px;height:16px;flex:none}
+    .gate .msg{font-size:13px;color:var(--rust);margin-top:12px;min-height:18px}
+    .gate .fine{font-size:12px;color:var(--muted);margin-top:18px;max-width:44em}
+
+    .report{margin-top:50px}
+    .report-head{border-top:2px solid var(--ink);padding-top:22px;margin-bottom:10px}
+    .report-head h2{font:clamp(26px,3.2vw,40px)/1.12 Georgia,serif}
+    .report-head p{font-size:15px;color:var(--muted);margin-top:10px;max-width:44em}
+    .dcard{border-top:1px solid var(--line);padding:30px 0}
+    .dcard-top{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:baseline;justify-content:space-between}
+    .dcard h3{font:clamp(23px,2.6vw,31px)/1.15 Georgia,serif}
+    .dpill{font-size:11px;text-transform:uppercase;letter-spacing:.12em;padding:6px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+    .dpill.lv0{background:rgba(116,147,123,.14);border-color:rgba(116,147,123,.5);color:#3f6049}
+    .dpill.lv1{background:rgba(169,185,170,.2);border-color:rgba(120,140,124,.5);color:#4a5b50}
+    .dpill.lv2{background:rgba(213,154,106,.18);border-color:rgba(183,120,70,.5);color:#8a5528}
+    .dpill.lv3{background:rgba(183,104,77,.16);border-color:rgba(183,104,77,.55);color:#8f4a33}
+    .dwhat{margin-top:14px;font-size:16px;color:#3b4842;max-width:46em}
+    .dsplit{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+    .dsplit h4{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:0 0 10px;font-weight:400}
+    .dsplit ul{margin:0;padding-left:18px;font-size:15px;color:#3b4842}
+    .dsplit li{margin-bottom:9px}
+    .dsplit li::marker{color:var(--sage)}
+    .dnote{margin-top:18px;font-size:14px;color:var(--muted);border-left:2px solid var(--sage);padding-left:14px}
+
+    .panel{margin-top:44px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,3.5vw,36px)}
+    .panel h2{font:clamp(23px,2.8vw,32px)/1.15 Georgia,serif;margin-bottom:14px}
+    .panel p{font-size:15px;color:#3b4842;max-width:46em}
+    .panel p+p{margin-top:12px}
+    .panel ul{margin:14px 0 0;padding-left:18px;font-size:15px;color:#3b4842}
+    .panel li{margin-bottom:8px}
+    .panel.warn{background:rgba(183,104,77,.07);border-color:rgba(183,104,77,.35)}
+
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+    .printMeta{display:none}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;gap:34px;align-items:start}
+      .hero-side{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:22px}
+      .premise{grid-template-columns:1fr;gap:26px}
+      .domain-grid{grid-template-columns:1fr 1fr}
+      .notdx-inner{grid-template-columns:1fr;gap:24px}
+      .bar-row{grid-template-columns:1fr;gap:7px}
+      .band{text-align:left}
+      .dsplit{grid-template-columns:1fr;gap:22px}
+      footer{flex-direction:column;gap:10px}
+    }
+    @media(max-width:560px){
+      .domain-grid{grid-template-columns:1fr}
+      nav,.topbar{height:auto;padding:16px clamp(18px,5vw,40px);flex-wrap:wrap}
+    }
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+    @page{size:auto;margin:.55in}
+    @media print{
+      body{background:#fff}
+      nav,.topbar,.progress,.actions,.gate,.cta,footer,.ghost,.primary{display:none!important}
+      .printMeta{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:18px}
+      .rwrap{padding:0;max-width:none}
+      .dcard,.panel{break-inside:avoid}
+      .track i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      .dpill{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    }
+  </style>
+</head>
+<body>
+
+<main id="home">
+  <nav>
+    <b class="brand">MindFull</b>
+    <span class="counter" id="counter">0 reflections completed on this device</span>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">A private executive function reflection</p>
+      <h1>It isn't one thing.<br><em>It's nine.</em></h1>
+      <p class="lede">"I can't focus," "I'm lazy," "I have ADHD" — the words people reach for are blunt instruments for something with parts. Executive function is a set of separate skills, and most people are steady in several and struggling in two or three. This reflection takes them apart one at a time, tells you which are actually giving you trouble, and gives you strategies built for that specific function rather than general advice about willpower.</p>
+    </div>
+    <div class="hero-side">
+      <b>33 questions</b>
+      About eight minutes. Nine functions, scored separately. Nothing is stored on any server, and no result here is a diagnosis.
+    </div>
+  </section>
+
+  <section class="premise">
+    <p class="eyebrow">The premise</p>
+    <blockquote>Executive function is not effort. It's the machinery that turns intention into action — and machinery is repairable in parts.</blockquote>
+    <p>The nine functions here are drawn from the executive function literature used in clinical and educational practice — Barkley's work on inhibition and self-regulation, Diamond's core functions, and the practical taxonomy Dawson and Guare built for coaching.</p>
+  </section>
+
+  <section class="domains">
+    <h2>The nine functions this looks at</h2>
+    <div class="domain-grid">
+      <article><span>01</span><h3>Task Initiation</h3><p>Starting without a deadline, a crisis, or another person standing over you.</p></article>
+      <article><span>02</span><h3>Sustained Attention</h3><p>Staying with something after it stops being interesting.</p></article>
+      <article><span>03</span><h3>Working Memory</h3><p>Holding information in mind while you use it.</p></article>
+      <article><span>04</span><h3>Response Inhibition</h3><p>The pause between the impulse and the action.</p></article>
+      <article><span>05</span><h3>Emotional Regulation</h3><p>Managing feeling well enough to keep working toward the goal.</p></article>
+      <article><span>06</span><h3>Cognitive Flexibility</h3><p>Shifting when the plan, the rule, or the situation changes.</p></article>
+      <article><span>07</span><h3>Planning &amp; Prioritizing</h3><p>Deciding what matters and in what order, before starting.</p></article>
+      <article><span>08</span><h3>Organization</h3><p>Systems for objects and information that survive a bad week.</p></article>
+      <article><span>09</span><h3>Time Management</h3><p>Estimating time, feeling it pass, and allocating it.</p></article>
+    </div>
+  </section>
+
+  <section class="notdx">
+    <div class="notdx-inner">
+      <h2>What this is, and what it can't do</h2>
+      <div>
+        <p><strong>This is not an ADHD test.</strong> It cannot tell you whether you have ADHD, or any other condition, and it isn't scored against a clinical norm. What it does is separate nine skills that usually get discussed as one lump, so you can see which ones are actually costing you something.</p>
+        <p>That distinction matters practically, because the same difficulties are produced by many different things: sleep debt, anxiety, depression, grief, chronic pain, thyroid problems, perimenopause, a head injury, substance use, trauma, autism, ADHD — or a workload no executive function could carry. A pattern here tells you where to look. It does not tell you why.</p>
+        <p>If what you find is costing you a job, a degree, or a relationship, that's worth a proper evaluation with someone who can look at history, context, and everything else on that list.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Name the part that's<br>actually hard.</h2>
+    <button class="primary start">Begin the reflection <span>&rarr;</span></button>
+    <p class="micro">Free · Private · No account</p>
+  </section>
+
+  <footer>
+    <b>MindFull</b>
+    <span>Educational reflection only. Not therapy, diagnosis, or crisis support. · MindFull Counseling &amp; Consulting</span>
+  </footer>
+</main>
+
+<main id="quiz" class="hidden">
+  <header class="topbar">
+    <button class="brand homeBtn">MindFull</button>
+    <span class="counter" id="progressText" style="text-transform:none;letter-spacing:.08em">0% complete</span>
+  </header>
+  <div class="progress"><i id="progressBar"></i></div>
+  <div class="qwrap">
+    <p class="qdomain" id="qdomain">Task Initiation</p>
+    <h2 class="qtext" id="qtext">Question</h2>
+    <div class="scale" id="scale"></div>
+    <div class="qnav">
+      <button id="previous" type="button">&larr; Previous</button>
+      <span id="qcount">1 of 32</span>
+      <button id="skip" type="button">Skip &rarr;</button>
+    </div>
+  </div>
+</main>
+
+<main id="results" class="hidden">
+  <header class="topbar">
+    <button class="brand homeBtn">MindFull</button>
+    <span class="counter" style="text-transform:none;letter-spacing:.08em">Your reflection</span>
+  </header>
+  <div class="rwrap">
+    <p class="printMeta" id="printMeta"></p>
+
+    <section class="result-intro">
+      <p class="eyebrow">Your profile</p>
+      <h1 id="headline">Where the friction is</h1>
+      <p id="subhead">Each function is scored on its own. Higher means more friction — more effort spent getting the same thing done — not less intelligence and not less trying.</p>
+      <div class="bars" id="bars"></div>
+    </section>
+
+    <section class="gate" id="gate">
+      <h2>Your full breakdown is ready</h2>
+      <p>Nine sections — what each function actually does, what it looks like when it's the one giving you trouble, and specific strategies for the three that scored highest for you. Enter your email and it opens right here, ready to print or save.</p>
+      <form id="gateform" novalidate>
+        <input type="email" id="email" placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+        <button class="primary" type="submit" id="go">Open my breakdown <span>&rarr;</span></button>
+      </form>
+      <label class="consent"><input type="checkbox" id="consent"> I understand this is an educational reflection, not a diagnosis or therapy, and I'm okay receiving occasional related resources.</label>
+      <div class="msg" id="msg" role="status" aria-live="polite"></div>
+      <p class="fine">Your address goes to a private list I keep and nowhere else — no third-party marketing service, no tracking. Your answers are never transmitted; the scoring happens in this browser and stays on this device.</p>
+    </section>
+
+    <section class="report hidden" id="report">
+      <div class="report-head">
+        <h2>Your nine functions, one at a time</h2>
+        <p id="reportLede">Ordered from most friction to least. Read the top three carefully and ignore the rest for now — trying to fix nine things at once is itself an executive function problem.</p>
+      </div>
+      <div id="cards"></div>
+
+      <section class="panel">
+        <h2>Start with one</h2>
+        <p id="oneThing">Pick a single strategy from your highest-friction function and run it for one week.</p>
+        <p>Choose by cost, not by importance: the strategy you'll actually still be doing on a bad Thursday beats the ideal system you'll abandon by Wednesday. Executive function strategies fail almost exclusively because they require executive function to maintain — so the good ones move the work into the environment, where it doesn't depend on how you feel that day.</p>
+        <ul>
+          <li><strong>Externalize it.</strong> If it has to be remembered, it will be forgotten. Put it in a place that will interrupt you at the moment it matters.</li>
+          <li><strong>Shrink the start.</strong> Most stuck tasks are stuck at the first step. Make the first step embarrassingly small and specific.</li>
+          <li><strong>Add a body.</strong> Working alongside another person — in the room or on a video call — reliably does what self-discipline does not.</li>
+          <li><strong>Design for the bad day.</strong> A system that only works when you're rested isn't a system.</li>
+        </ul>
+      </section>
+
+      <section class="panel warn">
+        <h2>What this reflection cannot tell you</h2>
+        <p>It cannot tell you whether you have ADHD. It's not a screener, it isn't normed against a clinical population, and self-report on a good day looks different from self-report on a bad one. What it gives you is vocabulary and a starting place.</p>
+        <p>Everything measured here is produced by many different causes. Sleep debt, anxiety, depression, grief, chronic pain, thyroid dysfunction, perimenopause, concussion, medication side effects, substance use, trauma, autism, ADHD, and an unmanageable workload all show up in these nine functions, often identically. Several can be true at once. Treating the wrong one is why people conclude that nothing works.</p>
+        <p>Two things worth checking before anything else, because they're common and reversible: how much you're actually sleeping, and whether the demands currently on you would overwhelm anyone.</p>
+        <p><strong>Worth a professional evaluation</strong> if what you scored is affecting work, school, parenting, health, or a relationship; if it has been true since childhood; if it got noticeably worse at an identifiable point; or if low mood, anxiety, or hopelessness travels with it. Bring this page — a clinician can do more with "initiation and time management, most days, for years" than with "I can't focus."</p>
+      </section>
+
+      <section class="panel">
+        <h2>If you take this to someone</h2>
+        <p>What actually helps a clinician, in rough order of usefulness:</p>
+        <ul>
+          <li>Which functions, and how often — not a general sense of struggling.</li>
+          <li>When it started, and whether there was a point it got worse.</li>
+          <li>What it has cost: the missed deadline, the late fee, the argument, the job.</li>
+          <li>What you've already tried, and what specifically happened when it stopped working.</li>
+          <li>Sleep, alcohol, medications, and anything medical currently in play.</li>
+          <li>Whether anyone in your family has a similar history.</li>
+        </ul>
+        <p>An evaluation for adults typically involves a clinical interview about your history, standardized rating scales, and sometimes input from someone who knew you as a child. It is not a single computer test, and being organized enough to arrive on time doesn't disqualify anyone from anything.</p>
+      </section>
+
+      <div class="actions">
+        <button class="primary" id="printResults">Print or save as PDF <span>&rarr;</span></button>
+        <button class="ghost" id="retake">Take it again</button>
+        <button class="ghost homeBtn">Back to the start</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <b>MindFull</b>
+    <span>Educational reflection only. Not therapy, diagnosis, or crisis support. · MindFull Counseling &amp; Consulting</span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ─────────────────────────────────────────────────────────────
+     SETTINGS — one line. Use the same Google Apps Script Web app
+     URL as the After the Affair page; this page tags its signups
+     with source "executive-function" so you can tell them apart.
+     ───────────────────────────────────────────────────────────── */
+  var ENDPOINT = "REPLACE_WITH_SCRIPT_URL";
+
+  var SCALE = ["Never","Rarely","Sometimes","Often","Almost always"];
+
+  var meta = {
+    init: {
+      label: "Task Initiation",
+      what: "Task initiation is the gap between deciding to do something and actually beginning it. It runs on its own machinery — separate from motivation, and separate from knowing how. This is why you can badly want a thing done, know every step, and still not start.",
+      signs: [
+        "The task you dread and the task you'd enjoy are both equally hard to begin",
+        "Nothing starts until a deadline, a crisis, or another person is standing there",
+        "You do six adjacent small things instead of the one thing"
+      ],
+      steady: "You start things without needing a crisis to push you — which is rarer than it sounds, and worth protecting when your schedule gets full.",
+      strategies: [
+        "Shrink the first step until it's under two minutes and physically specific — \"open the document and type the date,\" not \"work on the report.\" Momentum decides the rest.",
+        "Work alongside someone. A body double — in the room or on a silent video call, each doing your own work — starts tasks that willpower doesn't. This is the single highest-yield strategy for initiation.",
+        "Attach the start to something already automatic: after the coffee, before the shower. A cue you don't have to remember.",
+        "Set a ten-minute timer with explicit permission to stop when it rings. Starting is the expensive part; you'll usually keep going, but the permission has to be real.",
+        "Tell one person what you're starting and when. Intention spoken to another person behaves differently from intention held privately."
+      ]
+    },
+    attn: {
+      label: "Sustained Attention",
+      what: "Sustained attention is staying with something after it stops being interesting. Note that shape carefully: the problem is almost never an inability to focus — most people who score high here can disappear into something absorbing for six hours. It's holding attention on the unrewarding middle.",
+      signs: [
+        "Deep focus on what's interesting, near-zero on what isn't",
+        "You surface twenty minutes later on a different tab with no memory of switching",
+        "Reading the same paragraph three times without it landing"
+      ],
+      steady: "You can stay with unrewarding work long enough to finish it — which means the strategies below are worth knowing mainly for the weeks when you're depleted.",
+      strategies: [
+        "Work in timed blocks with the end defined before you begin. Twenty-five minutes is a starting point, not a rule — some people need twelve, some run well at fifty.",
+        "Remove the competing option rather than resisting it. Phone in another room, one tab, blocker on. Resisting a notification spends the exact resource you're short of.",
+        "Give hands or ears something low-grade — instrumental music, movement, gum. For many people a second, undemanding channel stabilizes attention rather than splitting it.",
+        "Give the task edges: \"until this section is done\" beats \"work on the report,\" which has no finish line to aim at.",
+        "Keep a capture sheet beside you. Write the intrusive thought down in four words instead of following it."
+      ]
+    },
+    wm: {
+      label: "Working Memory",
+      what: "Working memory holds information in mind while you use it — the sentence you're partway through, the three things you came upstairs for, step two while you're doing step one. It's a small, easily overwritten space, and being interrupted wipes it.",
+      signs: [
+        "Walking into a room with no idea why",
+        "Losing the back half of instructions while holding the front half",
+        "Losing your sentence when someone interrupts"
+      ],
+      steady: "You can hold several things in mind at once and pick them back up after an interruption — which makes you the person others rely on to remember, so watch what that costs you.",
+      strategies: [
+        "Stop holding anything. Write it the moment it appears, in whatever is closest. A note you didn't need costs you nothing; the one you didn't write costs an hour.",
+        "Ask for instructions in writing. If you can't, repeat them back and write while you repeat — saying and writing use different channels.",
+        "One landing zone by the door for keys, wallet, badge, glasses. Not \"usually there\" — always there, no exceptions, including when your hands are full.",
+        "Narrate multi-step tasks out loud. Talking yourself through keeps the sequence available in a way that thinking it doesn't.",
+        "Put reminders where the action happens — on the door, on the steering wheel, on the coffee maker — not in a list you'd have to remember to open."
+      ]
+    },
+    inhib: {
+      label: "Response Inhibition",
+      what: "Response inhibition is the pause between impulse and action — the half-second in which a reply can be reconsidered, a purchase reconsidered, a sentence left unsaid. It isn't about having fewer impulses. Everyone has them. This is the brake.",
+      signs: [
+        "Saying it and wanting the two seconds back immediately",
+        "Interrupting or finishing sentences, then apologizing for it",
+        "Purchases, commitments, or messages regretted within the hour"
+      ],
+      steady: "You have room between the impulse and the action — which is worth remembering when someone close to you clearly doesn't.",
+      strategies: [
+        "Insert a mechanical delay where it keeps costing you: emails sit in drafts for ten minutes, carts sit overnight, hard replies get written in a notes app first.",
+        "Remove one-tap purchasing and saved card details. Friction does the work that resolve doesn't.",
+        "In conversations you know get heated, count to three before speaking. It feels absurd and it works — the pause is trainable even when the impulse isn't.",
+        "Learn the body signal that arrives before the words do: the heat, the lean forward, the tightening. It's your only reliable early warning."
+      ]
+    },
+    emo: {
+      label: "Emotional Regulation",
+      what: "Emotional regulation is managing feeling well enough to keep moving toward what you actually want. It's listed among the executive functions because it's a control system, not a personality trait — and when it's overloaded, every other function on this list degrades with it.",
+      signs: [
+        "A small frustration takes the rest of the afternoon with it",
+        "Fine to overwhelmed with very little in between",
+        "Mild criticism that stays for hours"
+      ],
+      steady: "You can be upset and still functional — which means frustration costs you the moment rather than the day.",
+      strategies: [
+        "Name the feeling in one word before deciding anything. Labeling an emotion reliably lowers its intensity, and it takes about a second.",
+        "Use a physiological reset rather than reasoning: two inhales through the nose — a full one, then a short one on top — followed by a long exhale through the mouth. Five or six rounds.",
+        "Schedule recovery instead of earning it. A ten-minute walk after the hard call, on the calendar, not contingent on having handled it well.",
+        "Say the difference out loud: \"this is hard\" versus \"this is impossible.\" The second one ends the work; the first one doesn't.",
+        "Put the emotionally expensive task where your reserves are highest — for most people that's earlier than they schedule it."
+      ]
+    },
+    flex: {
+      label: "Cognitive Flexibility",
+      what: "Cognitive flexibility is shifting — changing approach when the situation changes, seeing a second interpretation, letting go of a plan that has stopped working. When it's costly, a changed plan doesn't feel like an inconvenience; it feels like the floor moving.",
+      signs: [
+        "A canceled plan or a changed instruction derails more of the day than it should",
+        "Staying with an approach that isn't working because switching feels worse than failing",
+        "A thought or conversation that won't put down"
+      ],
+      steady: "You adapt when things change without losing the thread — which is what lets you recover the rest of the day when something goes sideways.",
+      strategies: [
+        "Ask \"what would I do if this plan were already gone?\" before defending the plan. It moves you out of loss and into choice.",
+        "Give the stuck thought a bounded appointment — fifteen minutes at 4 p.m. — rather than fighting it now. Postponement works where suppression doesn't.",
+        "Build plan B while building plan A, when it's cheap. Improvising an alternative mid-disruption is the most expensive possible moment to think of one.",
+        "Practice small deliberate switches — a different route, a different order, a different chair. Flexibility is a trained capacity, and low-stakes reps make the high-stakes ones cheaper."
+      ]
+    },
+    plan: {
+      label: "Planning & Prioritizing",
+      what: "Planning is turning an outcome into a sequence; prioritizing is deciding what matters and what doesn't. They fail together and in a specific way: you can see everything that needs doing, all at once, at equal weight, with no order attached to it.",
+      signs: [
+        "Knowing everything on the list and not what to do first",
+        "Starting in the middle, then discovering the order was wrong",
+        "Big projects that stay abstract because they never break into steps"
+      ],
+      steady: "You sequence work before starting it, which is most of why complicated things get finished at all.",
+      strategies: [
+        "Write the steps before beginning. If a step takes more than one sitting, it isn't a step yet — break it again.",
+        "Order by consequence, not by urgency: ask what breaks if this is late. Urgency is loud and frequently wrong.",
+        "Cap the day at three real commitments. Everything past three is a wish list, and treating it as a plan guarantees the day feels like failure.",
+        "Work backward from the deadline, marking when each piece has to <em>start</em> rather than finish. Most plans fail at start dates, not end dates.",
+        "Have someone look at the plan for two minutes. Review is far cheaper than repair, and another person spots the missing step instantly."
+      ]
+    },
+    org: {
+      label: "Organization",
+      what: "Organization is having systems for objects and information that survive a bad week. The measure isn't tidiness — plenty of organized people are messy. It's whether you can find what you need when you need it, without a search.",
+      signs: [
+        "Losing things you use constantly, including things you put down five minutes ago",
+        "Systems that work for two weeks and then collapse entirely",
+        "Paper and email accumulating until something forces the issue"
+      ],
+      steady: "You can find what you need when you need it — which quietly saves you hours a week that other people spend searching.",
+      strategies: [
+        "Fewer places, not better habits. One inbox, one folder for the active project, one bag. Every additional location multiplies the search.",
+        "Everything that enters the house gets a spot. If it doesn't have one, it either gets one or it leaves.",
+        "Ten minutes at a fixed time daily beats four hours monthly. The daily version survives; the overhaul is already a symptom.",
+        "Make the right place the easiest place — a hook by the door beats a hanger in the closet every time, and the hook is the one that will still be used in March.",
+        "Expect collapse and schedule the rebuild. A system that needs resetting monthly is normal, not a personal failure."
+      ]
+    },
+    time: {
+      label: "Time Management",
+      what: "Time management depends on something more basic: an internal sense of time passing, and the ability to estimate how long a thing will take. When that sense is unreliable, no calendar app fixes it, because the numbers you're putting into the calendar are wrong.",
+      signs: [
+        "Tasks that reliably take much longer than expected",
+        "Losing an hour inside something absorbing with no sense of it passing",
+        "Late, or on time by a margin that costs everyone in the car"
+      ],
+      steady: "Your estimates are roughly accurate and you feel time passing — which is why buffers and calendars actually work for you.",
+      strategies: [
+        "Time yourself doing five routine tasks once, honestly. Estimation error is usually stable and personal — most people find they're off by a consistent factor, and knowing yours turns guessing into arithmetic.",
+        "Make time visible. A clock you can see from where you work, and a visual timer that shows the remaining block shrinking rather than counting numbers.",
+        "Schedule backwards from the leaving time, and include the parts nobody counts: shoes, keys, the bathroom, parking, the walk from the car.",
+        "Add fifty percent to your estimate as policy, not as an admission of anything.",
+        "Give open-ended activities an alarm at the end, not just a start time. \"I'll just check for a minute\" needs a hard edge from outside."
+      ]
+    }
+  };
+
+  var questions = [
+    {d:"init", t:"I put off starting something even when I know exactly what to do and want it done."},
+    {d:"init", t:"I need a deadline, a crisis, or someone waiting on me before I can begin."},
+    {d:"init", t:"I open the task, look at it for a while, and end up doing something else."},
+    {d:"init", t:"Once I decide to do something, I start it within a few minutes.", r:true},
+
+    {d:"attn", t:"I lose the thread partway through and have to start the paragraph, the row, or the task over."},
+    {d:"attn", t:"I can stay with something only while it's interesting or urgent."},
+    {d:"attn", t:"I find I've switched to my phone or another tab without deciding to."},
+    {d:"attn", t:"I can keep working on something boring until it's finished.", r:true},
+
+    {d:"wm", t:"I walk into a room and can't remember why I came in."},
+    {d:"wm", t:"I lose the second half of instructions while I'm holding onto the first half."},
+    {d:"wm", t:"If someone interrupts me, I lose what I was saying."},
+    {d:"wm", t:"I reread the same paragraph because none of it stayed."},
+
+    {d:"inhib", t:"I say something and immediately wish I'd waited two seconds."},
+    {d:"inhib", t:"I interrupt people or finish their sentences before they're done."},
+    {d:"inhib", t:"I buy, send, or commit to something and regret it shortly after."},
+
+    {d:"emo", t:"A small frustration derails the rest of what I was doing."},
+    {d:"emo", t:"I go from fine to overwhelmed with very little in between."},
+    {d:"emo", t:"Criticism, even mild, stays with me for hours."},
+    {d:"emo", t:"When something upsets me mid-task, I can settle myself and get back to it.", r:true},
+
+    {d:"flex", t:"A change of plan throws off more of my day than it should."},
+    {d:"flex", t:"I stay with an approach that isn't working because switching feels worse."},
+    {d:"flex", t:"I get stuck on a thought or a conversation and can't put it down."},
+
+    {d:"plan", t:"I know everything that needs doing but not what to do first."},
+    {d:"plan", t:"I start in the middle of something and later discover the order was wrong."},
+    {d:"plan", t:"Big projects stay abstract because I can't break them into steps."},
+    {d:"plan", t:"Before a complicated task, I map out the sequence.", r:true},
+
+    {d:"org", t:"I lose things I use constantly — keys, wallet, a file I saved an hour ago."},
+    {d:"org", t:"My systems work for a week or two and then fall apart."},
+    {d:"org", t:"Paperwork and email pile up until something forces me to deal with them."},
+
+    {d:"time", t:"Things take much longer than I estimated."},
+    {d:"time", t:"I lose track of how much time has passed while I'm absorbed in something."},
+    {d:"time", t:"I'm late, or on time by a margin that stresses everyone."},
+    {d:"time", t:"I build in buffer time and it usually turns out to be about right.", r:true}
+  ];
+
+  var BANDS = [
+    {max:24, name:"Working well", lv:0},
+    {max:44, name:"Occasional friction", lv:1},
+    {max:64, name:"Frequent friction", lv:2},
+    {max:100, name:"Significant friction", lv:3}
+  ];
+
+  var responses = [], index = 0, unlocked = false, lastScores = null;
+  var $ = function(id){ return document.getElementById(id); };
+
+  function store(k, v){ try{ if(v===undefined) return window.localStorage.getItem(k); window.localStorage.setItem(k, v); }catch(e){ return null; } }
+
+  function show(id){
+    ["home","quiz","results"].forEach(function(x){ $(x).classList.toggle("hidden", x !== id); });
+    window.scrollTo(0,0);
+  }
+
+  function bandFor(score){
+    for(var i=0;i<BANDS.length;i++){ if(score <= BANDS[i].max) return BANDS[i]; }
+    return BANDS[BANDS.length-1];
+  }
+
+  function updateCounter(){
+    var n = Number(store("mindfullEfCompletions") || 0);
+    $("counter").textContent = n.toLocaleString() + " reflection" + (n===1?"":"s") + " completed on this device";
+  }
+
+  function addCompletion(){
+    var n = Number(store("mindfullEfCompletions") || 0) + 1;
+    store("mindfullEfCompletions", n);
+    updateCounter();
+  }
+
+  function start(){
+    responses = new Array(questions.length);
+    index = 0; unlocked = false;
+    $("report").classList.add("hidden");
+    $("gate").classList.remove("hidden");
+    show("quiz");
+    render();
+  }
+
+  function render(){
+    var q = questions[index];
+    var pct = Math.round((index) / questions.length * 100);
+    $("progressText").textContent = pct + "% complete";
+    $("progressBar").style.width = pct + "%";
+    $("qdomain").textContent = meta[q.d].label;
+    $("qtext").textContent = q.t;
+    $("qcount").textContent = (index+1) + " of " + questions.length;
+    $("previous").disabled = index === 0;
+
+    var wrap = $("scale");
+    wrap.innerHTML = "";
+    SCALE.forEach(function(label, i){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "opt" + (responses[index] === i+1 ? " sel" : "");
+      b.innerHTML = '<i></i><span>' + label + '</span>';
+      b.addEventListener("click", function(){
+        responses[index] = i+1;
+        advance();
+      });
+      wrap.appendChild(b);
+    });
+  }
+
+  function advance(){
+    if(index < questions.length - 1){ index++; render(); }
+    else { finish(); }
+  }
+
+  function scores(){
+    var groups = {};
+    Object.keys(meta).forEach(function(k){ groups[k] = []; });
+    questions.forEach(function(q, i){
+      var v = responses[i];
+      if(!v) return;                        // skipped
+      groups[q.d].push(q.r ? 6 - v : v);
+    });
+    return Object.keys(meta).map(function(key){
+      var vals = groups[key];
+      var pct = 0;
+      if(vals.length){
+        var sum = vals.reduce(function(a,b){ return a+b; }, 0);
+        pct = Math.round((sum - vals.length) / (vals.length * 4) * 100);
+      }
+      return { key: key, score: pct, band: bandFor(pct), answered: vals.length };
+    });
+  }
+
+  function finish(){
+    lastScores = scores().sort(function(a,b){ return b.score - a.score; });
+    addCompletion();
+    renderBars(lastScores);
+    renderHeadline(lastScores);
+    renderCards(lastScores);
+    $("printMeta").textContent = "MindFull Executive Function Reflection · " +
+      new Intl.DateTimeFormat(undefined,{year:"numeric",month:"long",day:"numeric"}).format(new Date());
+    show("results");
+    if(store("mindfullEfUnlocked")) unlock();   // already gave an email on this device
+    requestAnimationFrame(function(){
+      var fills = document.querySelectorAll("#bars .track i");
+      Array.prototype.forEach.call(fills, function(f){ f.style.width = f.getAttribute("data-w") + "%"; });
+    });
+  }
+
+  function renderBars(sc){
+    var html = "";
+    sc.forEach(function(d){
+      html += '<div class="bar-row">' +
+        '<span class="name">' + meta[d.key].label + '</span>' +
+        '<span class="track"><i class="lv' + d.band.lv + '" data-w="' + Math.max(d.score, 2) + '"></i></span>' +
+        '<span class="band">' + d.band.name + '</span>' +
+      '</div>';
+    });
+    $("bars").innerHTML = html;
+  }
+
+  function renderHeadline(sc){
+    var top = sc.slice(0,3).map(function(d){ return meta[d.key].label; });
+    var high = sc.filter(function(d){ return d.band.lv >= 2; });
+    if(!high.length){
+      $("headline").textContent = "No single function is giving you much trouble";
+      $("subhead").textContent = "Nothing here rose to frequent friction. Your highest was " + top[0] +
+        ", and the breakdown below still explains what each function does and what helps when it slips — useful for a stretch when you're depleted, or for making sense of someone else.";
+    } else {
+      $("headline").textContent = top[0] + " is where the friction is";
+      $("subhead").textContent = "Your three highest are " + top[0] + ", " + top[1] + ", and " + top[2] +
+        ". Each function is scored on its own — higher means more effort spent getting the same thing done, not less intelligence and not less trying.";
+    }
+  }
+
+  function renderCards(sc){
+    var html = "";
+    sc.forEach(function(d){
+      var m = meta[d.key];
+      var steady = d.band.lv === 0;
+      html += '<article class="dcard">' +
+        '<div class="dcard-top"><h3>' + m.label + '</h3>' +
+        '<span class="dpill lv' + d.band.lv + '">' + d.band.name + ' · ' + d.score + '</span></div>' +
+        '<p class="dwhat">' + m.what + '</p>';
+
+      if(steady){
+        html += '<p class="dnote">' + m.steady + '</p>' +
+          '<div class="dsplit"><div><h4>Worth keeping in place</h4><ul>' +
+          '<li>' + m.strategies[0] + '</li>' +
+          '<li>' + m.strategies[1] + '</li>' +
+          '</ul></div><div><h4>What it looks like when it slips</h4><ul>' +
+          m.signs.map(function(s){ return '<li>' + s + '</li>'; }).join("") +
+          '</ul></div></div>';
+      } else {
+        html += '<div class="dsplit"><div><h4>What this looks like for you</h4><ul>' +
+          m.signs.map(function(s){ return '<li>' + s + '</li>'; }).join("") +
+          '</ul></div><div><h4>What actually helps</h4><ul>' +
+          m.strategies.map(function(s){ return '<li>' + s + '</li>'; }).join("") +
+          '</ul></div></div>';
+      }
+      html += '</article>';
+    });
+    $("cards").innerHTML = html;
+
+    var first = sc[0];
+    $("oneThing").innerHTML = "Your highest-friction function is <strong>" + meta[first.key].label +
+      "</strong>. Pick one strategy from its list — the cheapest one, not the best one — and run it for a week before adding anything else.";
+  }
+
+  /* ── email gate ── */
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+
+  function sendEmail(value, cb){
+    if(!ENDPOINT || ENDPOINT.indexOf("REPLACE") === 0){ cb(); return; }
+    var sink = "sink-" + (new Date()).getTime();
+    var iframe = document.createElement("iframe");
+    iframe.name = sink; iframe.style.display = "none";
+    document.body.appendChild(iframe);
+    var f = document.createElement("form");
+    f.method = "POST"; f.action = ENDPOINT; f.target = sink; f.style.display = "none";
+    function field(n,v){ var i=document.createElement("input"); i.type="hidden"; i.name=n; i.value=v; f.appendChild(i); }
+    field("email", value);
+    field("source", "executive-function");
+    document.body.appendChild(f);
+    var done = false;
+    function finishSend(){ if(done) return; done = true; cb(); }
+    iframe.addEventListener("load", finishSend);
+    setTimeout(finishSend, 3000);   // never leave anyone waiting on a form
+    f.submit();
+  }
+
+  function unlock(){
+    unlocked = true;
+    store("mindfullEfUnlocked", "1");
+    $("gate").classList.add("hidden");
+    $("report").classList.remove("hidden");
+    $("report").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  $("gateform").addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = $("email").value.trim();
+    $("msg").textContent = "";
+    if(!validEmail(v)){
+      $("msg").textContent = "That email address doesn't look complete — check it and try again.";
+      $("email").focus(); return;
+    }
+    if(!$("consent").checked){
+      $("msg").textContent = "Please check the box so I know you've read what this is.";
+      return;
+    }
+    $("go").disabled = true;
+    $("go").innerHTML = "Opening…";
+    sendEmail(v, unlock);
+  });
+
+  /* ── wiring ── */
+  Array.prototype.forEach.call(document.querySelectorAll(".start"), function(b){ b.onclick = start; });
+  Array.prototype.forEach.call(document.querySelectorAll(".homeBtn"), function(b){ b.onclick = function(){ show("home"); }; });
+  $("previous").onclick = function(){ if(index){ index--; render(); } };
+  $("skip").onclick = function(){ advance(); };
+  $("printResults").onclick = function(){ window.print(); };
+  $("retake").onclick = start;
+
+  document.addEventListener("keydown", function(e){
+    if($("quiz").classList.contains("hidden")) return;
+    if(e.key >= "1" && e.key <= "5"){ responses[index] = Number(e.key); advance(); }
+    if(e.key === "ArrowLeft" && index){ index--; render(); }
+  });
+
+  updateCounter();
+})();
+</script>
+</body>
+</html>
