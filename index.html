@@ -3,10 +3,139 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="MindFull Counseling & Consulting, the private counseling practice of Michael Entrekin, LPC, LAC. Serving clients in Pennsylvania, New Jersey, and South Carolina.">
+  <meta name="description" content="Therapist in Aston, PA and online across Philadelphia. Michael Entrekin, LPC offers counseling for anxiety, couples, ADHD, and grief in Delaware County.">
   <meta name="theme-color" content="#f7f5f0">
 
-  <title>Michael Entrekin | MindFull Counseling & Consulting</title>
+  <title>Therapist in Aston &amp; Philadelphia, PA | MindFull Counseling</title>
+  <link rel="canonical" href="https://www.mindfullcounseling.org/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MindFull Counseling &amp; Consulting">
+  <meta property="og:title" content="Therapist in Aston &amp; Philadelphia, PA | Michael Entrekin, LPC">
+  <meta property="og:description" content="In-person counseling in Aston, Delaware County, and telehealth across Philadelphia and Pennsylvania.">
+  <meta property="og:url" content="https://www.mindfullcounseling.org/">
+  <meta property="og:image" content="https://www.mindfullcounseling.org/michael-entrekin.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "MedicalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.mindfullcounseling.org/#practice",
+      "name": "MindFull Counseling & Consulting",
+      "url": "https://www.mindfullcounseling.org/",
+      "image": "https://www.mindfullcounseling.org/michael-entrekin.webp",
+      "telephone": "+1-609-415-0514",
+      "email": "michael.mindfull@gmail.com",
+      "priceRange": "$$",
+      "description": "Private counseling practice of Michael Entrekin, LPC, offering in-person therapy in Aston, Delaware County, and telehealth across Philadelphia and Pennsylvania.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5151 Chichester Avenue",
+        "addressLocality": "Aston",
+        "addressRegion": "PA",
+        "postalCode": "19014",
+        "addressCountry": "US"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=5151+Chichester+Avenue+Aston+PA+19014",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Philadelphia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Pennsylvania"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Aston"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delaware County, PA"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Chester County, PA"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "New Jersey"
+        }
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Anxiety and stress counseling"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Couples therapy"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "ADHD and executive function counseling"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Grief and transition counseling"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Faith and church hurt counseling"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Telehealth therapy"
+        }
+      ],
+      "founder": {
+        "@id": "https://www.mindfullcounseling.org/#michael"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.mindfullcounseling.org/#michael",
+      "name": "Michael Entrekin",
+      "jobTitle": "Licensed Professional Counselor",
+      "honorificSuffix": "LPC, M.Ed.",
+      "image": "https://www.mindfullcounseling.org/michael-entrekin.webp",
+      "worksFor": {
+        "@id": "https://www.mindfullcounseling.org/#practice"
+      },
+      "knowsAbout": [
+        "Anxiety",
+        "Couples therapy",
+        "ADHD",
+        "Grief",
+        "CBT",
+        "DBT",
+        "ACT",
+        "Emotionally Focused Therapy"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.mindfullcounseling.org/#website",
+      "url": "https://www.mindfullcounseling.org/",
+      "name": "MindFull Counseling & Consulting",
+      "publisher": {
+        "@id": "https://www.mindfullcounseling.org/#practice"
+      }
+    }
+  ]
+}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -181,13 +310,17 @@
       background: var(--gold);
     }
 
-    .hero h1 {
+    .hero .eyebrow {
+      margin: 0;
+    }
+
+    .hero .display {
       font: 500 clamp(4.1rem, 7.2vw, 7.2rem)/.87 var(--serif);
       letter-spacing: -.045em;
       margin: 1.8rem 0 2rem;
     }
 
-    .hero h1 em {
+    .hero .display em {
       font-weight: 400;
       color: var(--black);
     }
@@ -249,6 +382,8 @@
 
     .portrait {
       width: 100%;
+      max-width: 100%;
+      height: auto;
       aspect-ratio: 4/5;
       object-fit: cover;
       object-position: center top;
@@ -679,6 +814,118 @@
       display: none;
     }
 
+
+    /* Locations */
+
+    .locations {
+      background: var(--paper);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 4rem;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .location {
+      padding: 2rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .location:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+
+    .location:last-child {
+      padding-right: 0;
+    }
+
+    .location h3 {
+      font: 500 2rem/1.05 var(--serif);
+      margin: .9rem 0;
+    }
+
+    .location p,
+    .location address {
+      color: var(--soft);
+      font-size: .9rem;
+      font-style: normal;
+      margin: 0 0 1rem;
+    }
+
+    .location a.more {
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: .2rem;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      margin-top: 3.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-list details {
+      border-bottom: 1px solid var(--line);
+      padding: 1.4rem 0;
+    }
+
+    .faq-list summary {
+      font: 500 1.45rem var(--serif);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      color: var(--gold);
+      font-family: var(--sans);
+    }
+
+    .faq-list details[open] summary::after {
+      content: "–";
+    }
+
+    .faq-list details p {
+      color: var(--soft);
+      margin: .8rem 0 0;
+      max-width: 700px;
+    }
+
+    .footer-nap a {
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 860px) {
+      .location-grid {
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+      }
+
+      .location,
+      .location:first-child,
+      .location:last-child {
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 1.7rem 0;
+      }
+    }
+
     /* Tablet */
 
     @media (max-width: 860px) {
@@ -732,7 +979,7 @@
         gap: 3rem;
       }
 
-      .hero h1 {
+      .hero .display {
         font-size: 4.8rem;
       }
 
@@ -826,7 +1073,7 @@
         padding-top: .5rem;
       }
 
-      .hero h1 {
+      .hero .display {
         font-size: 3.8rem;
       }
 
@@ -917,7 +1164,7 @@
 
         <span class="brand-copy">
           <strong>MindFull Counseling</strong>
-          <span>The private practice of Michael Entrekin</span>
+          <span>Aston &amp; Philadelphia, PA</span>
         </span>
       </a>
 
@@ -934,6 +1181,7 @@
         <a href="#specialties">Specialties</a>
         <a href="#approach">Approach</a>
         <a href="#about">About Michael</a>
+        <a href="#locations">Locations</a>
         <a href="#resources">Resources</a>
         <a class="nav-cta" href="#contact">Begin a conversation</a>
       </nav>
@@ -944,19 +1192,21 @@
     <section class="hero" id="top">
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">
-            Private counseling with Michael Entrekin
-          </div>
+          <h1 class="eyebrow">
+            Therapist in Aston &amp; Philadelphia, PA
+          </h1>
 
-          <h1>
+          <p class="display">
             Insight is the beginning.<br>
             <em>Change is the work.</em>
-          </h1>
+          </p>
 
           <p class="hero-lede">
             I offer thoughtful, direct, and deeply personal counseling for
             individuals, couples, and families who want to understand the
-            patterns shaping their lives—and move beyond them.
+            patterns shaping their lives—and move beyond them. Sessions are
+            in person at my office in Aston, Delaware County, and online for
+            clients across Philadelphia and Pennsylvania.
           </p>
 
           <div class="actions">
@@ -977,7 +1227,10 @@
           <img
             class="portrait"
             src="michael-entrekin.webp"
-            alt="Michael Entrekin, licensed professional counselor"
+            alt="Michael Entrekin, LPC, licensed professional counselor in Aston and Philadelphia, PA"
+            width="800"
+            height="1000"
+            fetchpriority="high"
           >
 
           <div class="portrait-caption">
@@ -990,10 +1243,10 @@
 
     <div class="credentials-bar">
       <div class="shell credentials-grid">
-        <div>A private, clinician-led practice</div>
-        <div>Pennsylvania · LPC</div>
-        <div>New Jersey · LAC</div>
-        <div>South Carolina</div>
+        <div>Pennsylvania LPC · Private practice</div>
+        <div>In person · Aston, PA</div>
+        <div>Telehealth · Philadelphia &amp; all PA</div>
+        <div>Also licensed in NJ &amp; SC</div>
       </div>
     </div>
 
@@ -1012,14 +1265,16 @@
           <p class="section-intro">
             You do not need to arrive with a diagnosis or a perfectly stated
             goal. I meet clients where they are and help them understand what
-            is happening beneath the surface.
+            is happening beneath the surface. Adults, couples, and families
+            from Philadelphia, Delaware County, and the Main Line come to me
+            for help with:
           </p>
 
           <div class="specialty-list">
             <article class="specialty">
               <div class="specialty-num">01</div>
               <div>
-                <h3>Anxiety & stress</h3>
+                <h3>Anxiety &amp; stress therapy</h3>
                 <p>
                   Overthinking, avoidance, perfectionism, and persistent
                   internal pressure.
@@ -1030,7 +1285,7 @@
             <article class="specialty">
               <div class="specialty-num">02</div>
               <div>
-                <h3>Couples & attachment</h3>
+                <h3>Couples therapy &amp; attachment</h3>
                 <p>
                   Conflict, disconnection, betrayal, trust, communication,
                   and repair.
@@ -1041,7 +1296,7 @@
             <article class="specialty">
               <div class="specialty-num">03</div>
               <div>
-                <h3>ADHD & executive function</h3>
+                <h3>ADHD &amp; executive function</h3>
                 <p>
                   Focus, initiation, organization, follow-through, and
                   self-understanding.
@@ -1052,7 +1307,7 @@
             <article class="specialty">
               <div class="specialty-num">04</div>
               <div>
-                <h3>Grief & transition</h3>
+                <h3>Grief &amp; life transitions</h3>
                 <p>
                   Loss, change, identity shifts, and the difficult seasons
                   that resist easy answers.
@@ -1063,7 +1318,7 @@
             <article class="specialty">
               <div class="specialty-num">05</div>
               <div>
-                <h3>Faith & church hurt</h3>
+                <h3>Faith &amp; church hurt</h3>
                 <p>
                   Spiritual questions and wounds explored with clinical care
                   and respect.
@@ -1074,7 +1329,7 @@
             <article class="specialty">
               <div class="specialty-num">06</div>
               <div>
-                <h3>Identity & self-worth</h3>
+                <h3>Identity &amp; self-worth</h3>
                 <p>
                   Old narratives, shame, self-criticism, purpose, and
                   existential concerns.
@@ -1174,8 +1429,10 @@
             </p>
 
             <p>
-              I am a Licensed Professional Counselor in Pennsylvania and a
-              Licensed Associate Counselor in New Jersey. My experience spans
+              I am a Licensed Professional Counselor in Pennsylvania, seeing
+              clients in person in Aston and by telehealth throughout
+              Philadelphia and the rest of the state. I am also a Licensed
+              Associate Counselor in New Jersey. My experience spans
               private practice, school counseling, and teaching psychology at
               the college level.
             </p>
@@ -1217,6 +1474,130 @@
         </div>
       </div>
     </section>
+
+    <section class="locations" id="locations">
+      <div class="shell section-grid">
+        <div class="section-label">
+          Locations
+          <span></span>
+        </div>
+
+        <div>
+          <h2 class="section-title">
+            In person in Aston. Online across Philadelphia.
+          </h2>
+
+          <p class="section-intro">
+            Choose the format that fits your life. In-person sessions are held
+            at my Delaware County office, and secure telehealth is available
+            anywhere in Pennsylvania.
+          </p>
+
+          <div class="location-grid">
+            <article class="location">
+              <span class="resource-tag">In-person office</span>
+              <h3>Aston, Delaware County</h3>
+              <address>
+                5151 Chichester Avenue<br>
+                Aston, PA 19014
+              </address>
+              <p>Serving Aston, Media, Brookhaven, Chester, Glen Mills, Garnet Valley, Wallingford, and Chadds Ford.</p>
+              <a class="more" href="/aston-pa-counseling/">Aston counseling</a>
+            </article>
+
+            <article class="location">
+              <span class="resource-tag">Telehealth &amp; in person</span>
+              <h3>Philadelphia</h3>
+              <p>Online therapy for clients in Center City, Rittenhouse, South Philly, Fishtown, Manayunk, Chestnut Hill, and throughout the city, with in-person sessions in Aston.</p>
+              <a class="more" href="/philadelphia-therapist/">Philadelphia therapy</a>
+            </article>
+
+            <article class="location">
+              <span class="resource-tag">Telehealth</span>
+              <h3>All of Pennsylvania</h3>
+              <p>Secure video counseling for adults, couples, and families anywhere in the state, from the Main Line to Harrisburg and Pittsburgh.</p>
+              <a class="more" href="/online-therapy-pennsylvania/">Online therapy in PA</a>
+            </article>
+          </div>
+
+          <h2 class="section-title" style="margin-top:6rem">
+            Common questions.
+          </h2>
+
+          <div class="faq-list">
+            <details>
+              <summary>Where is your office?</summary>
+              <p>My office is at 5151 Chichester Avenue in Aston, PA 19014, in Delaware County. It is a short drive from Media, Brookhaven, Chester, Glen Mills, Garnet Valley, and Wallingford, with easy access from I-95 and Route 1.</p>
+            </details>
+            <details>
+              <summary>Do you see clients from Philadelphia?</summary>
+              <p>Yes. Many of my clients live in Philadelphia and meet with me by secure video, which saves the commute. Philadelphia clients who prefer in-person sessions are welcome at the Aston office, about a 30–40 minute drive from Center City.</p>
+            </details>
+            <details>
+              <summary>Do you offer online therapy in Pennsylvania?</summary>
+              <p>Yes. I provide telehealth counseling to adults, couples, and families anywhere in Pennsylvania through secure video.</p>
+            </details>
+            <details>
+              <summary>Do you take insurance?</summary>
+              <p>I am an out-of-network provider. I work with self-pay clients and some insurance options in Pennsylvania and New Jersey, and I can provide documentation you may be able to submit for out-of-network reimbursement. Reach out and I will walk you through your options.</p>
+            </details>
+            <details>
+              <summary>How do I get started?</summary>
+              <p>Email or call me with a few sentences about what brings you in. I respond personally, and we will set up a brief conversation to see whether I am the right fit.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is your office?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "My office is at 5151 Chichester Avenue in Aston, PA 19014, in Delaware County. It is a short drive from Media, Brookhaven, Chester, Glen Mills, Garnet Valley, and Wallingford, with easy access from I-95 and Route 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you see clients from Philadelphia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many of my clients live in Philadelphia and meet with me by secure video, which saves the commute. Philadelphia clients who prefer in-person sessions are welcome at the Aston office, about a 30–40 minute drive from Center City."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer online therapy in Pennsylvania?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. I provide telehealth counseling to adults, couples, and families anywhere in Pennsylvania through secure video."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you take insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I am an out-of-network provider. I work with self-pay clients and some insurance options in Pennsylvania and New Jersey, and I can provide documentation you may be able to submit for out-of-network reimbursement. Reach out and I will walk you through your options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email or call me with a few sentences about what brings you in. I respond personally, and we will set up a brief conversation to see whether I am the right fit."
+      }
+    }
+  ]
+}
+    </script>
 
     <section class="resources" id="resources">
       <div class="shell section-grid">
@@ -1300,7 +1681,8 @@
         <p>
           Send me a few sentences about what brings you here. I will respond
           personally, and we can begin with a conversation about what you
-          need and whether I am the right counselor for you.
+          need and whether I am the right counselor for you. In person in
+          Aston, or online anywhere in Pennsylvania.
         </p>
 
         <div class="actions">
@@ -1335,6 +1717,20 @@
         <p class="footer-brand">
           MindFull Counseling & Consulting · The private practice of
           Michael Entrekin
+        </p>
+
+        <p class="footer-nap">
+          5151 Chichester Avenue, Aston, PA 19014 ·
+          <a href="tel:+16094150514">(609) 415-0514</a> ·
+          <a href="mailto:michael.mindfull@gmail.com">michael.mindfull@gmail.com</a>
+        </p>
+
+        <p>
+          In-person counseling in Aston, Delaware County · Telehealth across
+          Philadelphia and Pennsylvania ·
+          <a href="/philadelphia-therapist/">Philadelphia</a> ·
+          <a href="/aston-pa-counseling/">Aston</a> ·
+          <a href="/online-therapy-pennsylvania/">Online therapy in PA</a>
         </p>
 
         <p>

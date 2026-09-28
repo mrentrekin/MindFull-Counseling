@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /after-the-affair/c/
+Allow: /
+
+Sitemap: https://www.mindfullcounseling.org/sitemap.xml
