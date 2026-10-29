@@ -772,6 +772,75 @@ footer.dark .crisis{color:rgba(255,255,255,.75)}
 #specialties .grid4 .tile h3{font-size:1.28rem}
 @media (max-width:1100px){#specialties .grid4{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){#specialties .grid4{grid-template-columns:1fr}}
+
+/* ---------- Two wings: Counseling | Consulting switch ---------- */
+.wing-switch{display:inline-flex;align-items:center;gap:2px;padding:4px;border-radius:999px;margin-left:18px;margin-right:auto;
+  background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.32));backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+  box-shadow:0 1px 0 rgba(255,255,255,.85) inset,0 0 0 1px rgba(0,0,0,.08),0 6px 18px -8px rgba(0,0,0,.25)}
+.wing-switch a{font-size:.78rem;font-weight:500;letter-spacing:.02em;padding:7px 14px;border-radius:999px;color:var(--ink-soft);transition:background .3s,color .3s}
+.wing-switch a.on{background:var(--ink);color:#fff}
+.wing-switch a:not(.on):hover{color:var(--ink)}
+.nav.nav-dark .wing-switch{background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.06));box-shadow:0 1px 0 rgba(255,255,255,.2) inset,0 0 0 1px rgba(255,255,255,.14)}
+.nav.nav-dark .wing-switch a{color:rgba(255,255,255,.7)}
+.nav.nav-dark .wing-switch a.on{background:#fff;color:#111}
+footer .wing-link{display:inline-block;margin-top:6px;border-bottom:1px solid currentColor}
+@media (max-width:1100px){.nav .brand-text span{display:none}}
+@media (max-width:860px){.nav .brand-text{display:none}.wing-switch{margin-left:12px}}
+@media (max-width:380px){.wing-switch a{padding:6px 10px;font-size:.72rem}}
+
+/* ---------- Consulting components ---------- */
+.ov-card .ctas{margin-top:24px}
+.doors{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
+.door{position:relative;isolation:isolate;display:block;padding:26px 24px;border-radius:var(--gk-radius);corner-shape:squircle;background:var(--gk-material);
+  backdrop-filter:var(--gk-blur);-webkit-backdrop-filter:var(--gk-blur);box-shadow:var(--gk-shadow);transition:transform .35s ease}
+.door::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;pointer-events:none;
+  background:conic-gradient(from var(--gk-turn),rgba(var(--gk-hue),.35) 0%,rgba(var(--gk-hue),.30) 14%,rgba(var(--gk-hue),.035) 55%,rgba(var(--gk-hue),.035) 80%,rgba(var(--gk-hue),.35) 100%),var(--gk-specular);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:gk-orbit 11s linear infinite}
+.door:hover{transform:translateY(-3px)}
+.door h3{font-size:1.4rem;margin-bottom:6px}
+.door p{font-size:.9rem;opacity:.7}
+.door .arrow{position:absolute;top:22px;right:24px;opacity:.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{font-size:.76rem;letter-spacing:.04em;padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,.14)}
+.dark .chips span{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
+.tile a.more{display:inline-block;margin-top:14px;font-size:.86rem;font-weight:500;border-bottom:1px solid currentColor}
+.dark .tile a.more{color:#fff}
+
+.apps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:64px}
+.app{position:relative;isolation:isolate;padding:26px 22px;border-radius:var(--gk-radius);corner-shape:squircle;background:var(--gk-material);
+  backdrop-filter:var(--gk-blur);-webkit-backdrop-filter:var(--gk-blur);box-shadow:var(--gk-shadow);display:flex;flex-direction:column}
+.app-icon{width:62px;height:62px;border-radius:18px;corner-shape:squircle;background:#111;color:#fff;display:grid;place-items:center;
+  font-family:var(--serif);font-size:1.7rem;font-style:italic;margin-bottom:18px;box-shadow:0 8px 20px -10px rgba(0,0,0,.6),0 1px 0 rgba(255,255,255,.2) inset}
+.dark .app-icon{background:#fff;color:#111}
+.app h3{font-size:1.3rem;margin-bottom:6px}
+.app p{font-size:.88rem;color:var(--ink-soft);flex:1}
+.dark .app p{color:rgba(255,255,255,.64)}
+.status{display:inline-block;margin-top:16px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.status.live{color:var(--ink);font-weight:600}
+.dark .status{color:rgba(255,255,255,.5)}.dark .status.live{color:#fff}
+.app a.more{margin-top:8px;font-size:.86rem;font-weight:500;border-bottom:1px solid currentColor;align-self:flex-start}
+
+.shelf-title{font-family:var(--serif);font-size:1.6rem;margin:64px 0 20px}
+.shelf{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.book{display:flex;flex-direction:column}
+.cover{aspect-ratio:2/3;border-radius:6px 14px 14px 6px;padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(90deg,rgba(0,0,0,.18) 0,rgba(0,0,0,0) 8%),#fff;color:#111;box-shadow:0 22px 40px -22px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.1);margin-bottom:16px}
+.light .cover{background:linear-gradient(90deg,rgba(255,255,255,.14) 0,rgba(255,255,255,0) 8%),#111;color:#fff}
+.cover-title{font-family:var(--serif);font-size:1.35rem;line-height:1.1}
+.cover-author{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.book h3{font-size:1.1rem;margin-bottom:4px}
+.book p{font-size:.84rem;color:var(--ink-soft);flex:1}
+.dark .book p{color:rgba(255,255,255,.62)}
+.book a{margin-top:10px;font-size:.84rem;font-weight:500;border-bottom:1px solid currentColor;align-self:flex-start}
+.dark .book a{color:#fff}
+.shelf-note{padding:26px;border-radius:var(--gk-radius);border:1px dashed rgba(255,255,255,.25);color:rgba(255,255,255,.66);font-size:.92rem;grid-column:1/-1}
+.light .shelf-note{border-color:rgba(0,0,0,.2);color:var(--ink-soft)}
+
+#schools .grid3,#churches .grid3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1100px){.apps,.shelf{grid-template-columns:repeat(3,1fr)}.doors{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.apps,.shelf{grid-template-columns:repeat(2,1fr)}#schools .grid3,#churches .grid3{grid-template-columns:1fr}}
+@media (max-width:480px){.doors,.apps{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.door::after{animation:none}}
 </style>
 </head>
 <body id="top">
@@ -802,6 +871,7 @@ footer.dark .crisis{color:rgba(255,255,255,.75)}
       <svg class="brand-mark" aria-hidden="true"><use href="#mf-logo"/></svg>
       <span class="brand-text"><strong>MindFull Counseling</strong><span>Aston &amp; Philadelphia, PA</span></span>
     </a>
+    <div class="wing-switch" aria-label="MindFull sites"><a class="on" href="./" aria-current="page">Counseling</a><a href="consulting/">Consulting</a></div>
     <nav class="links" id="links" aria-label="Primary">
       <a href="#specialties">Specialties</a>
       <a href="#about">About Michael</a>
@@ -1022,7 +1092,7 @@ footer.dark .crisis{color:rgba(255,255,255,.75)}
 <footer>
   <div class="wrap">
     <div class="foot-brand"><svg aria-hidden="true"><use href="#mf-logo"/></svg><div><strong>MindFull Counseling &amp; Consulting</strong><span>Your Mind. Full.</span></div></div>
-    <p>The private practice of Michael Entrekin</p>
+    <p>The private practice of Michael Entrekin · <a class="wing-link" href="consulting/">MindFull Consulting →</a></p>
     <p>5151 Chichester Avenue, Aston, PA 19014 · <a href="tel:+16094150514">(609) 415-0514</a> · <a href="mailto:michael.mindfull@gmail.com">michael.mindfull@gmail.com</a></p>
     <p>In-person counseling in Aston, Delaware County · Telehealth across Philadelphia and Pennsylvania · <a href="https://mindfullcounseling.org/philadelphia-therapist/">Philadelphia</a> · <a href="https://mindfullcounseling.org/aston-pa-counseling/">Aston</a> · <a href="https://mindfullcounseling.org/online-therapy-pennsylvania/">Online therapy in PA</a></p>
     <p>Licensed in Pennsylvania, New Jersey, and South Carolina</p>
